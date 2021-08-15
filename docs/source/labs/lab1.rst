@@ -1,4 +1,4 @@
-Laboratorio 0: Curvas del MOSFET
+Laboratorio 1: Curvas del MOSFET
 ################################
 
 Este laboratorio es una introducción a las herramientas que se utilizarán en los distintitos laboratorios, se inicia con una guía rápida de instalación y luego se simularán transistores PMOS y NMOS.
