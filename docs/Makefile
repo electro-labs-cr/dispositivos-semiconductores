@@ -6,7 +6,7 @@
 SPHINXOPTS    ?=
 SPHINXBUILD   ?= sphinx-build
 SOURCEDIR     = source
-BUILDDIR      = ../../repoDoc
+BUILDDIR      = ../../outRepo
 PDFBUILDDIR   = /tmp
 PDF           = ../manual.pdf
 
