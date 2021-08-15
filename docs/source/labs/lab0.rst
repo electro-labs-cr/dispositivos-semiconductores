@@ -11,6 +11,16 @@ Objetivos
 
 Procedimiento
 *************
+
+Instalación de herramientas
+===========================
+#.  Electric es una herramienta “Open Source” para el diseño de circuitos integrados, posee  muchas  funciones  de  diseño  y  verificación  como  DRC,  ERC,LVS,  enrutamiento  y análisis del esfuerzo lógico. Para instalar Electric de forma rápida vaya al sitio de `Electric <https://www.staticfreesoft.com/productsFree.html>`_ y  guarde  el  binario  electric.jar en  su  computadora, el programa debe puede ser ejectutado con java  en Windows, Linux o Mac
+
+#.  LTSpice es la herramienta de Spice que se utilizará para las simulaciones. Para instalar LTSpice  vaya  al sitio de  `LTspice  <https://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html>`_ y  descarge la herramienta. El programa esta disponible para Windows y Mac, en Linux puede ser instalada usando Wine
+
+
+Simulación: curvas del transistor
+=================================
 #.  Cree una celda en vista de layout como se muestra en la :numref:`lab0_1` , deles un nombre significativo por ejemplo NMOS_IV_lay,  como  referencia  puede  consultar  el  tutorial,  use :math:`W_n = 10𝞴`
 
     .. figure:: ../img/Lab0_1.png
