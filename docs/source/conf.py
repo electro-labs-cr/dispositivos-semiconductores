@@ -17,9 +17,9 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Laboratorios de Microelectronica'
-copyright = '2021, Oscar Villalta'
-author = 'Oscar Villalta'
+project = 'Dispositivos Semiconductores'
+copyright = '2021, Loriana Sanabria - Oscar Villalta'
+author = 'Loriana Sanabria - Oscar Villalta'
 
 # The full version, including alpha/beta/rc tags
 release = '1.0'
@@ -55,8 +55,14 @@ exclude_patterns = []
 # a list of builtin themes.
 #
 html_theme = 'sphinx_rtd_theme'
+#html_theme = 'sphinx_book_theme'
+#html_theme = 'furo'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+
+html_logo = 'img/LogoUCR.png'
+
+numfig = True
