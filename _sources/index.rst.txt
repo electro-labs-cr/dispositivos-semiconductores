@@ -5,15 +5,22 @@
 
 Dispositivos Semiconductores - Laboratorios
 ============================================================
-
 -  :ref:`labs/lab0:Laboratorio 0: Curvas del MOSFET`
    
    .. include:: labs/lab0.rst
       :start-line: 2
       :end-line: 4
 
--  :ref:`labs/lab1:Laboratorio 1: Curvas del MOSFET`
+-  :ref:`labs/lab1:Laboratorio 1: Crear y simular un inversor`
    
    .. include:: labs/lab1.rst
          :start-line: 2
          :end-line: 4
+
+
+.. toctree::
+   :caption: Contenido:
+   :maxdepth: 1
+   :glob:
+      
+   labs/lab*

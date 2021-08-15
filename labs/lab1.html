@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Laboratorio 1: Curvas del MOSFET &mdash; documentación de Dispositivos Semiconductores - 1.0</title>
+  <title>Laboratorio 1: Crear y simular un inversor &mdash; documentación de Dispositivos Semiconductores - 1.0</title>
   
 
   
@@ -57,7 +57,7 @@
           
 
           
-            <a href="../contents.html" class="icon icon-home"> Dispositivos Semiconductores
+            <a href="../index.html" class="icon icon-home"> Dispositivos Semiconductores
           
 
           
@@ -91,10 +91,21 @@
               
             
             
-              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Contenido:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="lab0.html">Laboratorio 0: Curvas del MOSFET</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Laboratorio 1: Curvas del MOSFET</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Laboratorio 1: Crear  y  simular un inversor</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#objetivos">Objetivos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#procedimiento">Procedimiento</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#layout-y-esquematico-de-los-inversores">Layout y esquemático de los inversores</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#simulacion-1-curva-de-transicion-del-inversor">Simulación 1: curva de transición del inversor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#simulacion-2-potencia">Simulación 2: potencia</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#simulacion-3-tiempo-de-ascenso-y-caida">Simulación 3: tiempo de ascenso y caída</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#simulacion-4-ruido">Simulación 4: ruido</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
             
@@ -110,7 +121,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../contents.html">Dispositivos Semiconductores</a>
+          <a href="../index.html">Dispositivos Semiconductores</a>
         
       </nav>
 
@@ -141,9 +152,9 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../contents.html" class="icon icon-home"></a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Laboratorio 1: Curvas del MOSFET</li>
+      <li>Laboratorio 1: Crear  y  simular un inversor</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -162,52 +173,116 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="laboratorio-1-curvas-del-mosfet">
-<h1>Laboratorio 1: Curvas del MOSFET<a class="headerlink" href="#laboratorio-1-curvas-del-mosfet" title="Enlazar permanentemente con este título">¶</a></h1>
-<p>Este laboratorio es una introducción a las herramientas que se utilizarán en los distintitos laboratorios, se inicia con una guía rápida de instalación y luego se simularán transistores PMOS y NMOS.</p>
+  <div class="section" id="laboratorio-1-crear-y-simular-un-inversor">
+<h1>Laboratorio 1: Crear  y  simular un inversor<a class="headerlink" href="#laboratorio-1-crear-y-simular-un-inversor" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>En este laboratorio se crearán inversores de distintos tamaños y se realizaran simulaciones para comparar su comportamiento</p>
 <div class="section" id="objetivos">
 <h2>Objetivos<a class="headerlink" href="#objetivos" title="Enlazar permanentemente con este título">¶</a></h2>
 <ul class="simple">
-<li><p>Familiarizarse con las herramientas</p></li>
-<li><p>Analizar la curva de corriente <span class="math notranslate nohighlight">\(I_{ds}\)</span> contra <span class="math notranslate nohighlight">\(V_{ds}\)</span>, para distintos valores de <span class="math notranslate nohighlight">\(V_{gs}\)</span></p></li>
-<li><p>Identificar las regiones de operación para los transistores NMOS y PMOS</p></li>
+<li><p>Analizar la curva de VI VRS VO para un “inversor” para distintos radios <span class="math notranslate nohighlight">\({𝛽_p}/{𝛽_n}\)</span></p></li>
+<li><p>Simular el tiempo de ascenso y caída para los inversor</p></li>
+<li><p>Analizar el consumo de potencia de un inversor</p></li>
 </ul>
 </div>
 <div class="section" id="procedimiento">
 <h2>Procedimiento<a class="headerlink" href="#procedimiento" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="layout-y-esquematico-de-los-inversores">
+<h3>Layout y esquemático de los inversores<a class="headerlink" href="#layout-y-esquematico-de-los-inversores" title="Enlazar permanentemente con este título">¶</a></h3>
 <ol class="arabic">
-<li><p>Cree una celda en vista de layout como se muestra en la <a class="reference internal" href="#lab0-1"><span class="std std-numref">Figura 6</span></a> , deles un nombre significativo por ejemplo NMOS_IV_lay,  como  referencia  puede  consultar  el  tutorial,  use <span class="math notranslate nohighlight">\(W_n = 10𝞴\)</span></p>
-<div class="figure align-center" id="lab0-1">
-<a class="reference internal image-reference" href="../_images/Lab0_1.png"><img alt="../_images/Lab0_1.png" src="../_images/Lab0_1.png" style="width: 213.5px; height: 309.5px;" /></a>
-<p class="caption"><span class="caption-number">Figura 6 </span><span class="caption-text">Vista de layout de un transistor NMOS</span><a class="headerlink" href="#lab0-1" title="Enlace permanente a esta imagen">¶</a></p>
+<li><p>Cree  el  esquemático  y  el  ícono  para  un  inversor    con  las  siguientes  dimensiones <span class="math notranslate nohighlight">\(W_p = 20𝜆\)</span> y <span class="math notranslate nohighlight">\(W_n = 10𝜆\)</span>.   Asegúrese   de   exportar   las   entradas   y   salidas.   En TutorialVLSILab se  explica  con  detalle  los  pasos  a  seguir  para  crear  una  celda refiérase a este para la creación del primer inversor, un nombre representativo para este inversor puede ser Inv_20_10.</p>
+<div class="figure align-center" id="lab1-1">
+<a class="reference internal image-reference" href="../_images/Lab1_1.png"><img alt="../_images/Lab1_1.png" src="../_images/Lab1_1.png" style="width: 194.5px; height: 347.0px;" /></a>
+<p class="caption"><span class="caption-number">Figura 6 </span><span class="caption-text">Esquemático del inversor</span><a class="headerlink" href="#lab1-1" title="Enlace permanente a esta imagen">¶</a></p>
 </div>
 </li>
-<li><p>Establezca el modelo de Spice para el transistor</p></li>
-<li><p>Presione la tecla F5 para verificar que no hayan errores en el layout</p></li>
-<li><p>Exporte las terminales:</p>
-<div class="figure align-center" id="id1">
-<a class="reference internal image-reference" href="../_images/Lab0_2.png"><img alt="../_images/Lab0_2.png" src="../_images/Lab0_2.png" style="width: 335.0px; height: 299.0px;" /></a>
-<p class="caption"><span class="caption-number">Figura 7 </span><span class="caption-text">Transistor NMOS con terminales</span><a class="headerlink" href="#id1" title="Enlace permanente a esta imagen">¶</a></p>
+<li><p>Dibuje el layout para esta celda. Para este laboratorio <span class="math notranslate nohighlight">\(V_{cc}\)</span>  y <span class="math notranslate nohighlight">\(V_{ss}\)</span> deberán correr de forma  horizontal  en  la  parte  superior  e  inferior  de  la  celda  en    metal  1,    el  espacio entre <span class="math notranslate nohighlight">\(V_{cc}\)</span>  y <span class="math notranslate nohighlight">\(V_{ss}\)</span> será de 80 λ de centro a centro. Los transistores nmos ocuparan la parte  inferior  de  la  celda  y  los  pmos  la  parte  superior;  las  entradas  y  salidas  se conectaran por medio de contactos de metal 2, aparte de esto las ningún metal2 o 3 deberá  ser  utilizado  dentro  de  las  celdas.  Asegúrese  de  establecer  el  modelo  de Spice para los transistores.</p>
+<div class="figure align-center" id="lab1-2">
+<a class="reference internal image-reference" href="../_images/Lab1_2.png"><img alt="../_images/Lab1_2.png" src="../_images/Lab1_2.png" style="width: 112.5px; height: 362.0px;" /></a>
+<p class="caption"><span class="caption-number">Figura 7 </span><span class="caption-text">Layout para del inversor</span><a class="headerlink" href="#lab1-2" title="Enlace permanente a esta imagen">¶</a></p>
 </div>
 </li>
-<li><p>Repita para el transistor PMOS:</p>
-<div class="figure align-center" id="id2">
-<a class="reference internal image-reference" href="../_images/Lab0_3.png"><img alt="../_images/Lab0_3.png" src="../_images/Lab0_3.png" style="width: 376.0px; height: 342.5px;" /></a>
-<p class="caption"><span class="caption-number">Figura 8 </span><span class="caption-text">Transistor PMOS con terminales</span><a class="headerlink" href="#id2" title="Enlace permanente a esta imagen">¶</a></p>
+<li><p>Use la herramienta DRC para verificar que el layout cumple con las reglas de diseño</p></li>
+<li><p>Verifique que el layout y el esquemático sean equivalentes por medio de NCC. Puede ver la celda en 3D para tener un mejor entendimiento de la interacción entre las distintas capas:</p>
+<div class="figure align-center" id="lab1-3">
+<a class="reference internal image-reference" href="../_images/Lab1_3.png"><img alt="../_images/Lab1_3.png" src="../_images/Lab1_3.png" style="width: 293.0px; height: 199.0px;" /></a>
+<p class="caption"><span class="caption-number">Figura 8 </span><span class="caption-text">Vista en 3D del inversor</span><a class="headerlink" href="#lab1-3" title="Enlace permanente a esta imagen">¶</a></p>
 </div>
 </li>
-<li><p>Cree una simulación para los dos transistores donde para 5 valores de <span class="math notranslate nohighlight">\(V_{gs}\)</span> se muestre la relación de corriente <span class="math notranslate nohighlight">\(I_{ds}\)</span> vs <span class="math notranslate nohighlight">\(V_{gs}\)</span>, similar a las mostradas en la <a class="reference internal" href="#lab0-4"><span class="std std-numref">Figura 9</span></a> y la <a class="reference internal" href="#lab0-5"><span class="std std-numref">Figura 10</span></a></p>
-<div class="figure align-center" id="lab0-4">
-<a class="reference internal image-reference" href="../_images/Lab0_4.png"><img alt="../_images/Lab0_4.png" src="../_images/Lab0_4.png" style="width: 614.5px; height: 305.5px;" /></a>
-<p class="caption"><span class="caption-number">Figura 9 </span><span class="caption-text">Curvas <span class="math notranslate nohighlight">\(I_{ds}\)</span> vs <span class="math notranslate nohighlight">\(V_{gs}\)</span> del transistor PMOS</span><a class="headerlink" href="#lab0-4" title="Enlace permanente a esta imagen">¶</a></p>
+<li><p>Ahora cree otros dos inversores (las tres vistas) para dos grupos de dimensiones: <span class="math notranslate nohighlight">\(W_p = 10𝜆\)</span>, <span class="math notranslate nohighlight">\(W_n = 10𝜆\)</span> y <span class="math notranslate nohighlight">\(W_p = 15𝜆\)</span>, <span class="math notranslate nohighlight">\(W_n = 5𝜆\)</span>. El tamaño de la celda se debe mantener. Para hacer esto más rápido de click derecho  sobre la celda Inv_20_10 seleccione “Duplicate cells in group” cambie el nombre para el grupo y modifique esta nueva celda.</p>
+<div class="figure align-center" id="lab1-4">
+<a class="reference internal image-reference" href="../_images/Lab1_4.png"><img alt="../_images/Lab1_4.png" src="../_images/Lab1_4.png" style="width: 97.0px; height: 90.4px;" /></a>
+<p class="caption"><span class="caption-number">Figura 9 </span><span class="caption-text">Menu de duplicación de celdas</span><a class="headerlink" href="#lab1-4" title="Enlace permanente a esta imagen">¶</a></p>
 </div>
-<div class="figure align-center" id="lab0-5">
-<a class="reference internal image-reference" href="../_images/Lab0_5.png"><img alt="../_images/Lab0_5.png" src="../_images/Lab0_5.png" style="width: 614.5px; height: 303.5px;" /></a>
-<p class="caption"><span class="caption-number">Figura 10 </span><span class="caption-text">Curvas <span class="math notranslate nohighlight">\(I_{ds}\)</span> vs <span class="math notranslate nohighlight">\(V_{gs}\)</span> del transistor NMOS</span><a class="headerlink" href="#lab0-5" title="Enlace permanente a esta imagen">¶</a></p>
+<div class="figure align-center" id="lab1-5">
+<a class="reference internal image-reference" href="../_images/Lab1_5.png"><img alt="../_images/Lab1_5.png" src="../_images/Lab1_5.png" style="width: 324.0px; height: 381.0px;" /></a>
+<p class="caption"><span class="caption-number">Figura 10 </span><span class="caption-text">Layout para las distintas versiones del inversor</span><a class="headerlink" href="#lab1-5" title="Enlace permanente a esta imagen">¶</a></p>
 </div>
 </li>
-<li><p>Identifique las regiones de operación para los transistores</p></li>
+<li><p>Use las herramientas DRC y NCC para las dos nuevas celdas que creó</p></li>
+<li><p>El largo de la celda es límitado,  debe ser de 80 λ desde el centro de gnd al de vdd, pero la celda puede crecer en ancho tanto como se quiera. Teniendo esto en cuenta  cree un inversor de tamaño <span class="math notranslate nohighlight">\(W_p = 40𝜆\)</span> y <span class="math notranslate nohighlight">\(W_n = 20𝜆\)</span></p></li>
 </ol>
+</div>
+<div class="section" id="simulacion-1-curva-de-transicion-del-inversor">
+<h3>Simulación 1: curva de transición del inversor<a class="headerlink" href="#simulacion-1-curva-de-transicion-del-inversor" title="Enlazar permanentemente con este título">¶</a></h3>
+<ol class="arabic">
+<li><p>Haga una copia de los layout para realizar una simulación</p></li>
+<li><p>Prepare la simulación, puede apoyarse en el tutorial</p></li>
+<li><p>Realice un análisis DC  donde se determine el valor de Vout para un valor dado de Vin, realice un grafico de <span class="math notranslate nohighlight">\(V_{out}\)</span> vs <span class="math notranslate nohighlight">\(V_{in}\)</span> para cada uno de los transistores</p>
+<div class="figure align-center" id="lab1-6">
+<a class="reference internal image-reference" href="../_images/Lab1_6.png"><img alt="../_images/Lab1_6.png" src="../_images/Lab1_6.png" style="width: 674.5px; height: 222.5px;" /></a>
+<p class="caption"><span class="caption-number">Figura 11 </span><span class="caption-text">VTC del inversor</span><a class="headerlink" href="#lab1-6" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+</li>
+<li><p>Determine los márgenes de ruido para cada uno de estos inversores</p></li>
+<li><p>Identifique   las   regiones   de   operación.   Los   voltajes   de   umbral   los   puede encontrar en el archivo Spice.txt</p>
+<p>Recuerde  que  el  punto  medio  de  voltaje <span class="math notranslate nohighlight">\(V_m\)</span> está  definido  como  el  punto  donde  la curva característica del inversor interseca la línea de ganancia unitaria es decir <span class="math notranslate nohighlight">\(V_m\)</span> es  el  punto  donde  <span class="math notranslate nohighlight">\(V_{out}\)</span>  es  igual  a  <span class="math notranslate nohighlight">\(V_{in}\)</span>.  Un  valor  de <span class="math notranslate nohighlight">\(V_{in} = V_m\)</span> no  representa  una cantidad booleana, pero, para <span class="math notranslate nohighlight">\(V_{in}\)</span> menor a <span class="math notranslate nohighlight">\(V_m\)</span> indica que salida es más cercana a un cero lógico.</p>
+<p>Un  inversor  simétrico  es  aquel  que  tiene    un  rango  de  voltajes  de  entrada,  que permite  que la  tensión  de  salida  tenga  un rango 0  y  1  de  igual  tamaño.  Esto  se logra cuando:</p>
+<div class="math notranslate nohighlight">
+\[V_m = 12 V_{dd}\]</div>
+</li>
+<li><p>Encuentre <span class="math notranslate nohighlight">\(V_m\)</span> para  los  distintos  transistores,  compare  el  valor  obtenido  con  el valor teórico, deber encontrar una expresión para <span class="math notranslate nohighlight">\(V_m\)</span> en términos de los voltajes de umbral de los transistores y de β</p></li>
+<li><p>Analice   como   afecta   el   dimensionamiento   de   los   transistores   la   curva característica  del  inversor  encuentre  la  relación  para <span class="math notranslate nohighlight">\({𝛽_p}/{𝛽_n}\)</span> los  transistores  que simuló</p></li>
+</ol>
+</div>
+<div class="section" id="simulacion-2-potencia">
+<h3>Simulación 2: potencia<a class="headerlink" href="#simulacion-2-potencia" title="Enlazar permanentemente con este título">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Para los siguientes cálculos considere el inversor simétrico de dimensiones <span class="math notranslate nohighlight">\(W_p = 20𝜆\)</span> y <span class="math notranslate nohighlight">\(W_n = 10𝜆\)</span></p></li>
+<li><p>De   la   simulación   anterior,   visualice   la   corriente   del   inversor   durante   la transición,  observe  que  la  corriente  alcanza  un  pico  en   <span class="math notranslate nohighlight">\(V_m\)</span>,  que  implicaciones tiene esto en consumo de potencia?</p></li>
+<li><p>La  potencia  dinámica  <span class="math notranslate nohighlight">\(P_{dyn}\)</span> deriva  del  hecho  de  que  cuando  hay  una  transición de  se crea un camino de Vdd  y Gnd que carga  o descarga <span class="math notranslate nohighlight">\(C_{out}\)</span>. Considere que la señal  de  entrada  es  una  onda  cuadrada  con  un  periodo  de  10ns,  y  que  la  carga para el inversor de de 4FO. Con estos datos calcule <span class="math notranslate nohighlight">\(P_{dyn}\)</span>.</p></li>
+</ol>
+</div>
+<div class="section" id="simulacion-3-tiempo-de-ascenso-y-caida">
+<h3>Simulación 3: tiempo de ascenso y caída<a class="headerlink" href="#simulacion-3-tiempo-de-ascenso-y-caida" title="Enlazar permanentemente con este título">¶</a></h3>
+<ol class="arabic">
+<li><p>Las  compuertas  lógicas    introducen  un  tiempo  de  retardo  cuanto  sus  entradas cambian,  la  señal  de  entrada  reacciona  a  la  salida,  pero  el  voltaje  de  salida  no puede  cambiar  de  forma  instantánea.  La  transición    de  la  salida  de 1  a  0  es  el retardo  de  caída  y  de  0  a  1  el  de  ascenso.  Estos  tiempos  se  pueden  calcular analizando las transiciones de los circuitos</p></li>
+<li><p>Realice una simulación con una carga de 4FO, en el los archivos de Spice puede ver  cuánto  es  la  capacitancia  de  entrada  para  cada  uno  para  cada  uno  de  los inversores  que  dibujó.  El  tiempo  de  ascenso  y  de    caída  se  definirán  como  el tiempo de la compuerta de pasar del 10% al 90% de su valor final</p>
+<div class="figure align-center" id="lab1-7">
+<a class="reference internal image-reference" href="../_images/Lab1_7.png"><img alt="../_images/Lab1_7.png" src="../_images/Lab1_7.png" style="width: 624.0px; height: 204.5px;" /></a>
+<p class="caption"><span class="caption-number">Figura 12 </span><span class="caption-text">Tiempos de ascenso y caída</span><a class="headerlink" href="#lab1-7" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+</li>
+<li><p>Compare los tiempos ascenso y caída para los distintos inversores que dibujó</p></li>
+<li><p>Ahora  manteniendo  la  misma  carga,  varíe  la  forma  de  la  señal  de  entrada, cambiando  el  slope,  algo  similar  a  lo  que  se  muestra  a  continuación,  escoja  5 valores para este slope  y simule para cada inversor, compare. Como afecta esta variación en la salida la velocidad de respuesta del inversor</p>
+<div class="figure align-center" id="lab1-8">
+<a class="reference internal image-reference" href="../_images/Lab1_8.png"><img alt="../_images/Lab1_8.png" src="../_images/Lab1_8.png" style="width: 700.0px; height: 181.0px;" /></a>
+<p class="caption"><span class="caption-number">Figura 13 </span><span class="caption-text">Slope de entrada</span><a class="headerlink" href="#lab1-8" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="simulacion-4-ruido">
+<h3>Simulación 4: ruido<a class="headerlink" href="#simulacion-4-ruido" title="Enlazar permanentemente con este título">¶</a></h3>
+<ol class="arabic">
+<li><p>Para analizar la inmunidad al ruido del inversor genere señales a la entrada que le  permitan  determinar    como  se  ve  afectado  el  valor  de  la  salida  por  el  ruido. Determine  qué  valor  de  voltaje  en  la  entrada  logra  distorsionar  la  salida. Itere cuantas veces sea necesario</p></li>
+<li><p>¿Cómo  se  ven  afectados  estos  valores  por  el  dimensionamiento  del  transistor? Qué nivel lógico se está beneficiado, en términos de inmunidad al ruido, con el dimensionamiento de los transistores.Figura 6.13. Laboratorio 1: Simulación de Ruido</p>
+<div class="figure align-center" id="lab1-9">
+<a class="reference internal image-reference" href="../_images/Lab1_9.png"><img alt="../_images/Lab1_9.png" src="../_images/Lab1_9.png" style="width: 671.5px; height: 334.5px;" /></a>
+<p class="caption"><span class="caption-number">Figura 14 </span><span class="caption-text">Simulación de ruido</span><a class="headerlink" href="#lab1-9" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+</li>
+</ol>
+</div>
 </div>
 </div>
 
