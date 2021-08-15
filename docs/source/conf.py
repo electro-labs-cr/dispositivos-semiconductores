@@ -69,5 +69,3 @@ html_logo = 'img/LogoUCR.png'
 numfig = True
 
 autosectionlabel_prefix_document = True
-
-master_doc = "contents"
