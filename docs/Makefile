@@ -6,7 +6,7 @@
 SPHINXOPTS    ?=
 SPHINXBUILD   ?= sphinx-build
 SOURCEDIR     = source
-BUILDDIR      = ../../microelectronica_sphinx 
+BUILDDIR      = ../../repoDoc 
 PDFBUILDDIR   = /tmp
 PDF           = ../manual.pdf
 
