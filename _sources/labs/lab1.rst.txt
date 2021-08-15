@@ -5,8 +5,8 @@ En este laboratorio se crearán inversores de distintos tamaños y se realizaran
 
 Objetivos
 *********
-*  Analizar la curva de VI VRS VO para un “inversor” para distintos radios :math:`{𝛽_p}/{𝛽_n}`
-*  Simular el tiempo de ascenso y caída para los inversor
+*  Analizar la curva de :math:`V_{in}` vs :math:`V_{out}` de un inversor para distintas proporciones :math:`{𝛽_p}/{𝛽_n}`
+*  Simular el tiempo de ascenso y caída del inversor
 *  Analizar el consumo de potencia de un inversor
 
 Procedimiento
