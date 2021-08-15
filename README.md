@@ -1,2 +1,2 @@
-# microelectronica
-Laboratorios del curso de microelectrónica
+# Dispositivos Semiconductores
+Laboratorios del curso de Dispositivos Semiconductores
