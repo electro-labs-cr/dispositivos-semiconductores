@@ -32,6 +32,10 @@ Procedimiento
   
         Layout de la compuerta dinámica
 
+
+Creación y simulación de compuertas dinámicas
+=============================================
+
 #.  Simule  la  compuerta,  durante  la  etapa  de  precarga  y  evaluación,  y  verifique    su correcto funcionamiento
 
     .. figure:: ../img/Lab4_2.png

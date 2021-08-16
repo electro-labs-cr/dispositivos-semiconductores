@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Dispositivos Semiconductores'
-copyright = '2021, Oscar Villalta'
+copyright = '2021, Loriana Sanabria - Oscar Villalta'
 author = 'Loriana Sanabria - Oscar Villalta'
 
 # The full version, including alpha/beta/rc tags
