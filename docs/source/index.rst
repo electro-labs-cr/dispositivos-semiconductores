@@ -27,6 +27,13 @@ Los siguientes laboratorios buscan complementar los contenidos teóricos del cur
       :start-line: 2
       :end-line: 4
 
+-  :ref:`labs/lab3:Laboratorio 3: Crear compuertas de paso`
+   
+   .. include:: labs/lab2.rst
+      :start-line: 2
+      :end-line: 4
+
+
 .. toctree::
    :caption: Contenido:
    :maxdepth: 1
@@ -35,4 +42,4 @@ Los siguientes laboratorios buscan complementar los contenidos teóricos del cur
    labs/lab*
 
 
-.. [1] Sanabria Sancho, Loriana; “Laboratorios de Microelectrónica”; IE-0502 Proyecto Eléctrico, Ingeniería Eléctrica, Universidad de Costa Rica, 2012
+.. .. [1] Sanabria Sancho, Loriana; “Laboratorios de Microelectrónica”; IE-0502 Proyecto Eléctrico, Ingeniería Eléctrica, Universidad de Costa Rica, 2012
