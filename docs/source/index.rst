@@ -33,3 +33,6 @@ Los siguientes laboratorios buscan complementar los contenidos teóricos del cur
    :glob:
       
    labs/lab*
+
+
+.. [1] Sanabria Sancho, Loriana; “Laboratorios de Microelectrónica”; IE-0502 Proyecto Eléctrico, Ingeniería Eléctrica, Universidad de Costa Rica, 2012
