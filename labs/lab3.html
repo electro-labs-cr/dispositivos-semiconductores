@@ -1,0 +1,337 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Laboratorio 3: Crear compuertas de paso &mdash; documentación de Dispositivos Semiconductores - 1.0</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="prev" title="Laboratorio 2: Crear compuertas básicas" href="lab2.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Dispositivos Semiconductores
+          
+
+          
+            
+            <img src="../_static/LogoUCR.png" class="logo" alt="Logotipo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Contenido:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="lab0.html">Laboratorio 0: Curvas del MOSFET</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lab1.html">Laboratorio 1: Crear  y  simular un inversor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lab2.html">Laboratorio 2: Crear compuertas básicas</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Laboratorio 3: Crear compuertas de paso</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#objetivos">Objetivos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#procedimiento">Procedimiento</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#creacion-y-simulacion-compuertas-de-paso">Creación y simulación: compuertas de paso</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creacion-y-simulacion-latches-y-flip-flops">Creación y simulación: latches y Flip Flops</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Dispositivos Semiconductores</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Laboratorio 3: Crear compuertas de paso</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/labs/lab3.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="laboratorio-3-crear-compuertas-de-paso">
+<h1>Laboratorio 3: Crear compuertas de paso<a class="headerlink" href="#laboratorio-3-crear-compuertas-de-paso" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>En este laboratorio se crearán distintas compuertas de paso y se utilizarán para crear compuertas sequenciales</p>
+<div class="section" id="objetivos">
+<h2>Objetivos<a class="headerlink" href="#objetivos" title="Enlazar permanentemente con este título">¶</a></h2>
+<ul class="simple">
+<li><p>Comprender el funcionamiento de los Latches y Flip Flops y Muxes</p></li>
+<li><p>Reconocer las ventajas y desventajas de utilizar compuertas de paso</p></li>
+<li><p>Comprender por medio de simulaciones el tiempo de setup</p></li>
+</ul>
+</div>
+<div class="section" id="procedimiento">
+<h2>Procedimiento<a class="headerlink" href="#procedimiento" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="creacion-y-simulacion-compuertas-de-paso">
+<h3>Creación y simulación: compuertas de paso<a class="headerlink" href="#creacion-y-simulacion-compuertas-de-paso" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Todas las celdas que construya deberán tener las siguientes características: Los transistores NMOS ocuparan la parte inferior de la celda y los PMOS la parte superior; las entradas y salidas se conectaran por medio de contactos de metal 2, aparte de esto  ningún metal2 o 3 deberá ser utilizado dentro de las celdas.</p>
+</div>
+<ol class="arabic">
+<li><p>Crear una compuerta de paso con las siguientes dimensiones que se indican en la tabla. Crear tanto la vista de layout como la de icono y esquemático.</p>
+<table class="docutils align-center" id="id1">
+<caption><span class="caption-number">Tabla 6 </span><span class="caption-text">Dimensiones de la compuerta de paso</span><a class="headerlink" href="#id1" title="Enlace permanente a esta tabla">¶</a></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>PMOS</p></th>
+<th class="head"><p>NMOS</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>10𝞴</p></td>
+<td><p>10𝞴</p></td>
+</tr>
+</tbody>
+</table>
+<div class="figure align-center" id="lab3-1">
+<a class="reference internal image-reference" href="../_images/Lab3_1.png"><img alt="../_images/Lab3_1.png" src="../_images/Lab3_1.png" style="width: 244.4px; height: 294.0px;" /></a>
+<p class="caption"><span class="caption-number">Figura 21 </span><span class="caption-text">Ícono y esquemático de la compuerta de paso</span><a class="headerlink" href="#lab3-1" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+<p>El  layout  de  esta  compuerta  es  un  poco  diferente  si  se  comparacon  una compuerta  como  una  NAND  o  NOR.  Se  debe  realizar  como  se  muestra continuación.  Recuerde  agregar  los  taps  y  conectar  el  poso  P  a  tierra  y  el  N  a vdd</p>
+<div class="figure align-center" id="lab3-2">
+<a class="reference internal image-reference" href="../_images/Lab3_2.png"><img alt="../_images/Lab3_2.png" src="../_images/Lab3_2.png" style="width: 276.40000000000003px; height: 282.40000000000003px;" /></a>
+<p class="caption"><span class="caption-number">Figura 22 </span><span class="caption-text">Layout de la compuerta de paso</span><a class="headerlink" href="#lab3-2" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+</li>
+<li><p>Simule esta compuerta, para comprobar que funcione como se espera</p>
+<div class="figure align-center" id="lab3-3">
+<a class="reference internal image-reference" href="../_images/Lab3_3.png"><img alt="../_images/Lab3_3.png" src="../_images/Lab3_3.png" style="width: 558.4px; height: 278.0px;" /></a>
+<p class="caption"><span class="caption-number">Figura 23 </span><span class="caption-text">Simulación de la compuerta de paso</span><a class="headerlink" href="#lab3-3" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+</li>
+<li><p>Qué ocurre  con  los  niveles  de  voltaje  a  la  salida    si  solo  se  utilizaran    un transistor  de  paso.  Realice  una  simulación  para  justificar  porque  se  usa  una compuerta de paso en lugar de un solo transistor de paso</p>
+<div class="figure align-center" id="lab3-4">
+<a class="reference internal image-reference" href="../_images/Lab3_4.png"><img alt="../_images/Lab3_4.png" src="../_images/Lab3_4.png" style="width: 558.8000000000001px; height: 279.2px;" /></a>
+<p class="caption"><span class="caption-number">Figura 24 </span><span class="caption-text">Simulación del transitor de paso</span><a class="headerlink" href="#lab3-4" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+</li>
+<li><p>Cambie  el  voltaje  de  umbral  en  el  archivo  de  proceso.  Utilice  el  voltaje  de umbral por defecto ±200𝑚𝑉.Que sucede  con el voltaje de salida?</p>
+<div class="figure align-center" id="lab3-5">
+<a class="reference internal image-reference" href="../_images/Lab3_5.png"><img alt="../_images/Lab3_5.png" src="../_images/Lab3_5.png" style="width: 558.4px; height: 279.2px;" /></a>
+<p class="caption"><span class="caption-number">Figura 25 </span><span class="caption-text">Variación del voltaje de umbral</span><a class="headerlink" href="#lab3-5" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+</li>
+<li><p>Utilizando compuertas de paso construya un mux 2:1, Simúlela para comprobar que estén bien construida. Suponga que cuenta tanto con la entrada de selección como con la entrada de selección negada</p>
+<div class="figure align-center" id="lab3-6">
+<a class="reference internal image-reference" href="../_images/Lab3_6.png"><img alt="../_images/Lab3_6.png" src="../_images/Lab3_6.png" style="width: 149.4px; height: 166.2px;" /></a>
+<p class="caption"><span class="caption-number">Figura 26 </span><span class="caption-text">Ícono del mux2:1</span><a class="headerlink" href="#lab3-6" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+<div class="figure align-center" id="lab3-7">
+<a class="reference internal image-reference" href="../_images/Lab3_7.png"><img alt="../_images/Lab3_7.png" src="../_images/Lab3_7.png" style="width: 296.0px; height: 295.6px;" /></a>
+<p class="caption"><span class="caption-number">Figura 27 </span><span class="caption-text">Layout del mux2:1</span><a class="headerlink" href="#lab3-7" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+</li>
+<li><p>Utilizando compuertas nand construya la misma compuerta  y el mismo mux 2:1</p>
+<div class="figure align-center" id="lab3-8">
+<a class="reference internal image-reference" href="../_images/Lab3_8.png"><img alt="../_images/Lab3_8.png" src="../_images/Lab3_8.png" style="width: 305.7px; height: 228.0px;" /></a>
+<p class="caption"><span class="caption-number">Figura 28 </span><span class="caption-text">Layout del mux2:1 usando compuertas nand</span><a class="headerlink" href="#lab3-8" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+</li>
+<li><p>Cuáles   son   las   ventajas    y   desventajas   de   usar   compuertas   de   paso comparándolas   con   compuertas   estándar.   Compárelas   en área,   tamaño   y potencia</p></li>
+<li><p>Imagine  que  en  lugar  de  un  mux  2:1  tiene  un  mux  3:1,  o  que  no  cuenta  no cuenta tango con la  entrada negada, que podría suceder en ese caso, investigue sobre “mux contention” y explique que sucedería</p></li>
+</ol>
+</div>
+<div class="section" id="creacion-y-simulacion-latches-y-flip-flops">
+<h3>Creación y simulación: latches y Flip Flops<a class="headerlink" href="#creacion-y-simulacion-latches-y-flip-flops" title="Enlazar permanentemente con este título">¶</a></h3>
+<ol class="arabic">
+<li><p>Construya un latch de fase positiva, tanto el layout como el esquemático</p>
+<div class="figure align-center" id="lab3-9">
+<a class="reference internal image-reference" href="../_images/Lab3_9.png"><img alt="../_images/Lab3_9.png" src="../_images/Lab3_9.png" style="width: 405.6px; height: 261.6px;" /></a>
+<p class="caption"><span class="caption-number">Figura 29 </span><span class="caption-text">Layout del latch</span><a class="headerlink" href="#lab3-9" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+</li>
+<li><p>Simule  el  latch  que  acaba  de  construir,  haga  la  entrada  variar  de  forma  que pueda comprobar que el latch funciona como se espera</p>
+<div class="figure align-center" id="lab3-10">
+<a class="reference internal image-reference" href="../_images/Lab3_10.png"><img alt="../_images/Lab3_10.png" src="../_images/Lab3_10.png" style="width: 557.6px; height: 278.40000000000003px;" /></a>
+<p class="caption"><span class="caption-number">Figura 30 </span><span class="caption-text">Simulación del latch</span><a class="headerlink" href="#lab3-10" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+</li>
+<li><p>Realice  una  simulación  que  le  permita  encontrar  el  tiempo  de  setup,  como referencia  puede  tomar  la  figura  a continuación.  Que  representa  el  tiempo  de setup en el circuito?</p>
+<div class="figure align-center" id="lab3-11">
+<a class="reference internal image-reference" href="../_images/Lab3_11.png"><img alt="../_images/Lab3_11.png" src="../_images/Lab3_11.png" style="width: 555.6px; height: 278.0px;" /></a>
+<p class="caption"><span class="caption-number">Figura 31 </span><span class="caption-text">Tiempo de setup del latch</span><a class="headerlink" href="#lab3-11" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+</li>
+<li><p>Utilizando la misma técnica encuentre el tiempo de hold para el latch</p></li>
+<li><p>Analice qué efectos puede tener ruido en la señal de reloj. Qué pasa si durante la fase negativa del reloj se produce un evento de ruido. Explique</p></li>
+<li><p>Utilizando el latch que acaba de construir, construya un FF de flaco positivo</p></li>
+<li><p>Encuentre el tiempo de setup para el FF</p></li>
+</ol>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="lab2.html" class="btn btn-neutral float-left" title="Laboratorio 2: Crear compuertas básicas" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Derechos de autor 2021, Loriana Sanabria - Oscar Villalta.
+
+    </p>
+  </div>
+    
+    
+    
+    Construido con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
