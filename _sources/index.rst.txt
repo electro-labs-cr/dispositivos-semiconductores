@@ -29,7 +29,13 @@ Los siguientes laboratorios buscan complementar los contenidos teóricos del cur
 
 -  :ref:`labs/lab3:Laboratorio 3: Crear compuertas de paso`
    
-   .. include:: labs/lab2.rst
+   .. include:: labs/lab3.rst
+      :start-line: 2
+      :end-line: 4
+
+-  :ref:`labs/lab4:Laboratorio 4: Crear compuertas dinámicas`
+   
+   .. include:: labs/lab4.rst
       :start-line: 2
       :end-line: 4
 
