@@ -21,6 +21,11 @@ Los siguientes laboratorios buscan complementar los contenidos teóricos del cur
          :start-line: 2
          :end-line: 4
 
+-  :ref:`labs/lab2:Laboratorio 2: Crear compuertas básicas`
+   
+   .. include:: labs/lab2.rst
+      :start-line: 2
+      :end-line: 4
 
 .. toctree::
    :caption: Contenido:
