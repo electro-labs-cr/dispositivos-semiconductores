@@ -6,7 +6,7 @@
 Dispositivos Semiconductores - Laboratorios
 ============================================================
 
-Los siguientes laboratorios buscan complementar los contenidos teóricos del curso de Dispositivos Semiconductores (IE-0311) del la `Escuela de Ingeniería Eléctrica de la UCR <https://eie.ucr.ac.cr/>`_
+Los siguientes laboratorios buscan complementar los contenidos teóricos del curso de Dispositivos Semiconductores (IE-0311) de la `Escuela de Ingeniería Eléctrica de la UCR <https://eie.ucr.ac.cr/>`_
 
 -  :ref:`tutorial/instalacion:Instalación de herramientas`
    

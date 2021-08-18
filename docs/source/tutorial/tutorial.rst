@@ -1,7 +1,7 @@
 Tutorial de laboratorio
 #######################
 
-Este tutorial le enseñara a utilizar las herramientas para que pueda completar los laboratorios:
+Este tutorial le enseñara a utilizar las herramientas para que pueda completar los laboratorios
 
 .. contents:: Contenidos del tutorial
     :depth: 4
