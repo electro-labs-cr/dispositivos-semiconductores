@@ -3,6 +3,9 @@ Laboratorio 3: Crear compuertas de paso
 
 En este laboratorio se crearán distintas compuertas de paso y se utilizarán para crear compuertas sequenciales
 
+.. contents:: Contenidos del laboratorio
+    :depth: 4
+
 Objetivos
 *********
 *   Comprender el funcionamiento de los Latches y Flip Flops y Muxes

@@ -3,6 +3,9 @@ Laboratorio 2: Crear compuertas básicas
 
 En este laboratorio se crearán distintas compuertas para formar una librería básica para los siguientes laboratorios
 
+.. contents:: Contenidos del laboratorio
+    :depth: 4
+
 Objetivos
 *********
 #.  Comparar por  medio  de  simulaciones  el  tiempo  de  respuesta  de  distintas compuertas

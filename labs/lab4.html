@@ -93,6 +93,8 @@
             
               <p class="caption" role="heading"><span class="caption-text">Contenido:</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/instalacion.html">Instalación de herramientas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/tutorial.html">Tutorial de laboratorio</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lab0.html">Laboratorio 0: Curvas del MOSFET</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lab1.html">Laboratorio 1: Crear  y  simular un inversor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lab2.html">Laboratorio 2: Crear compuertas básicas</a></li>
@@ -175,17 +177,33 @@
            <div itemprop="articleBody">
             
   <div class="section" id="laboratorio-4-crear-compuertas-dinamicas">
-<h1>Laboratorio 4: Crear compuertas dinámicas<a class="headerlink" href="#laboratorio-4-crear-compuertas-dinamicas" title="Enlazar permanentemente con este título">¶</a></h1>
+<h1><a class="toc-backref" href="#id2">Laboratorio 4: Crear compuertas dinámicas</a><a class="headerlink" href="#laboratorio-4-crear-compuertas-dinamicas" title="Enlazar permanentemente con este título">¶</a></h1>
 <p>En este laboratorio se trabaja con compuertas dinámicas y lógica dominó</p>
+<div class="contents topic" id="contenidos-del-laboratorio">
+<p class="topic-title">Contenidos del laboratorio</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#laboratorio-4-crear-compuertas-dinamicas" id="id2">Laboratorio 4: Crear compuertas dinámicas</a></p>
+<ul>
+<li><p><a class="reference internal" href="#objetivos" id="id3">Objetivos</a></p></li>
+<li><p><a class="reference internal" href="#procedimiento" id="id4">Procedimiento</a></p>
+<ul>
+<li><p><a class="reference internal" href="#creacion-y-simulacion-de-compuertas-dinamicas" id="id5">Creación y simulación de compuertas dinámicas</a></p></li>
+<li><p><a class="reference internal" href="#charge-sharing" id="id6">Charge Sharing</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
 <div class="section" id="objetivos">
-<h2>Objetivos<a class="headerlink" href="#objetivos" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2><a class="toc-backref" href="#id3">Objetivos</a><a class="headerlink" href="#objetivos" title="Enlazar permanentemente con este título">¶</a></h2>
 <ul class="simple">
 <li><p>Comprender el funcionamiento de las compuertas dinámicas y la lógica domino</p></li>
 <li><p>Reconocer las ventajas y desventajas de las compuertas dinámicas en relación a las compuertas estáticas</p></li>
 </ul>
 </div>
 <div class="section" id="procedimiento">
-<h2>Procedimiento<a class="headerlink" href="#procedimiento" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2><a class="toc-backref" href="#id4">Procedimiento</a><a class="headerlink" href="#procedimiento" title="Enlazar permanentemente con este título">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Nota</p>
 <p>Todas las celdas que construya deberán tener las siguientes características: Los transistores NMOS ocuparan la parte inferior de la celda y los PMOS la parte superior; las entradas y salidas se conectaran por medio de contactos de metal 2, aparte de esto ningún metal2 o 3 deberá ser utilizado dentro de las celdas</p>
@@ -211,54 +229,54 @@
 </table>
 <div class="figure align-center" id="lab4-1">
 <a class="reference internal image-reference" href="../_images/Lab4_1.png"><img alt="../_images/Lab4_1.png" src="../_images/Lab4_1.png" style="width: 332.40000000000003px; height: 289.2px;" /></a>
-<p class="caption"><span class="caption-number">Figura 32 </span><span class="caption-text">Layout de la compuerta dinámica</span><a class="headerlink" href="#lab4-1" title="Enlace permanente a esta imagen">¶</a></p>
+<p class="caption"><span class="caption-number">Figura 70 </span><span class="caption-text">Layout de la compuerta dinámica</span><a class="headerlink" href="#lab4-1" title="Enlace permanente a esta imagen">¶</a></p>
 </div>
 </li>
 </ol>
 <div class="section" id="creacion-y-simulacion-de-compuertas-dinamicas">
-<h3>Creación y simulación de compuertas dinámicas<a class="headerlink" href="#creacion-y-simulacion-de-compuertas-dinamicas" title="Enlazar permanentemente con este título">¶</a></h3>
+<h3><a class="toc-backref" href="#id5">Creación y simulación de compuertas dinámicas</a><a class="headerlink" href="#creacion-y-simulacion-de-compuertas-dinamicas" title="Enlazar permanentemente con este título">¶</a></h3>
 <ol class="arabic">
 <li><p>Simule  la  compuerta,  durante  la  etapa  de  precarga  y  evaluación,  y  verifique    su correcto funcionamiento</p>
 <div class="figure align-center" id="lab4-2">
 <a class="reference internal image-reference" href="../_images/Lab4_2.png"><img alt="../_images/Lab4_2.png" src="../_images/Lab4_2.png" style="width: 557.2px; height: 277.2px;" /></a>
-<p class="caption"><span class="caption-number">Figura 33 </span><span class="caption-text">Etapa de precarga y evaluación</span><a class="headerlink" href="#lab4-2" title="Enlace permanente a esta imagen">¶</a></p>
+<p class="caption"><span class="caption-number">Figura 71 </span><span class="caption-text">Etapa de precarga y evaluación</span><a class="headerlink" href="#lab4-2" title="Enlace permanente a esta imagen">¶</a></p>
 </div>
 </li>
 <li><p>Que  sucede  si  durante  la  etapa  de  precarga,  las  entradas    A  y  B  tienen  un  valor lógico de 1?</p></li>
 <li><p>Cuando  no  se  puede  garantizar  que  las  entradas  sean  cero  durante  la  precarga,  se incluye un transistor extra al fondo de  la “Pila” NMOS,  cuya entrada es el reloj, de esta  forma  se  evita  situaciones  de  contención  durante  la  precarga.  Agregue  este transistor a la compuerta que construyo y simúlela.Figura 6.33. Laboratorio 4: NANDdinámica con transistor de pie5.Según la teoría, la salida de una compuerta, dinámica, no puede ser  conectada  a la entrada   de   otra   compuerta   dinámica,   si   tienen   el   mismo   reloj,   explique</p>
 <div class="figure align-center" id="lab4-3">
 <a class="reference internal image-reference" href="../_images/Lab4_3.png"><img alt="../_images/Lab4_3.png" src="../_images/Lab4_3.png" style="width: 558.4px; height: 290.8px;" /></a>
-<p class="caption"><span class="caption-number">Figura 34 </span><span class="caption-text">Simulación de la nand dinámica con un transistor extra</span><a class="headerlink" href="#lab4-3" title="Enlace permanente a esta imagen">¶</a></p>
+<p class="caption"><span class="caption-number">Figura 72 </span><span class="caption-text">Simulación de la nand dinámica con un transistor extra</span><a class="headerlink" href="#lab4-3" title="Enlace permanente a esta imagen">¶</a></p>
 </div>
 </li>
 <li><p>Según la teoría, la salida de una compuerta, dinámica, no puede ser  conectada  a la entrada   de   otra   compuerta   dinámica,   si   tienen   el   mismo   reloj,   explique detalladamente  porque  y  realice  simulaciones  que  la  comprueben.  Una  forma sencilla de simularlo es mediante inversores dinámicos en cadena</p>
 <div class="figure align-center" id="lab4-4">
 <a class="reference internal image-reference" href="../_images/Lab4_4.png"><img alt="../_images/Lab4_4.png" src="../_images/Lab4_4.png" style="width: 163.2px; height: 60.0px;" /></a>
-<p class="caption"><span class="caption-number">Figura 35 </span><span class="caption-text">Inversores dinámicos en cadena</span><a class="headerlink" href="#lab4-4" title="Enlace permanente a esta imagen">¶</a></p>
+<p class="caption"><span class="caption-number">Figura 73 </span><span class="caption-text">Inversores dinámicos en cadena</span><a class="headerlink" href="#lab4-4" title="Enlace permanente a esta imagen">¶</a></p>
 </div>
 <div class="figure align-center" id="lab4-5">
 <a class="reference internal image-reference" href="../_images/Lab4_5.png"><img alt="../_images/Lab4_5.png" src="../_images/Lab4_5.png" style="width: 559.2px; height: 276.8px;" /></a>
-<p class="caption"><span class="caption-number">Figura 36 </span><span class="caption-text">Simulación de inversores dinámicos en cadena</span><a class="headerlink" href="#lab4-5" title="Enlace permanente a esta imagen">¶</a></p>
+<p class="caption"><span class="caption-number">Figura 74 </span><span class="caption-text">Simulación de inversores dinámicos en cadena</span><a class="headerlink" href="#lab4-5" title="Enlace permanente a esta imagen">¶</a></p>
 </div>
 </li>
 <li><p>Esto  se  soluciona  agregando  un  inversor  estático  luego  de  la compuerta  dinámica. Cree una compuerta and2 en lógica domino. Debe dimensionar los transistores para el  inversor  tomando  en  cuenta  cual  es  la  etapa  crítica  para  la  lógica  dinámica. Explique.</p>
 <div class="figure align-center" id="lab4-6">
 <a class="reference internal image-reference" href="../_images/Lab4_6.png"><img alt="../_images/Lab4_6.png" src="../_images/Lab4_6.png" style="width: 225.0px; height: 213.6px;" /></a>
-<p class="caption"><span class="caption-number">Figura 37 </span><span class="caption-text">Layout de una AND en lógica dominó</span><a class="headerlink" href="#lab4-6" title="Enlace permanente a esta imagen">¶</a></p>
+<p class="caption"><span class="caption-number">Figura 75 </span><span class="caption-text">Layout de una AND en lógica dominó</span><a class="headerlink" href="#lab4-6" title="Enlace permanente a esta imagen">¶</a></p>
 </div>
 </li>
 <li><p>Conecte  dos  compuertas  dominó  and2  y  simule  su  comportamiento,  muestre  los nodos intermedios.</p>
 <blockquote>
 <div><div class="figure align-center" id="lab4-7">
 <a class="reference internal image-reference" href="../_images/Lab4_7.png"><img alt="../_images/Lab4_7.png" src="../_images/Lab4_7.png" style="width: 558.0px; height: 278.0px;" /></a>
-<p class="caption"><span class="caption-number">Figura 38 </span><span class="caption-text">Simulación de dos compuertas and2 en lógica dominó</span><a class="headerlink" href="#lab4-7" title="Enlace permanente a esta imagen">¶</a></p>
+<p class="caption"><span class="caption-number">Figura 76 </span><span class="caption-text">Simulación de dos compuertas and2 en lógica dominó</span><a class="headerlink" href="#lab4-7" title="Enlace permanente a esta imagen">¶</a></p>
 </div>
 </div></blockquote>
 </li>
 <li><p>Si  el  nodo  dinámico  de  la  nand2  y  es  precargado  y  en  evaluación  permanece  en uno,  eventualmente  el  nodo  se  descarga,  esto  puede  ocurrir  en  nanosegundos  o milisegundos, realice una simulación donde observe este comportamiento</p>
 <div class="figure align-center" id="lab4-8">
 <a class="reference internal image-reference" href="../_images/Lab4_8.png"><img alt="../_images/Lab4_8.png" src="../_images/Lab4_8.png" style="width: 554.4px; height: 277.6px;" /></a>
-<p class="caption"><span class="caption-number">Figura 39 </span><span class="caption-text">Simulación del nodo dinámico de la compuerta nand2</span><a class="headerlink" href="#lab4-8" title="Enlace permanente a esta imagen">¶</a></p>
+<p class="caption"><span class="caption-number">Figura 77 </span><span class="caption-text">Simulación del nodo dinámico de la compuerta nand2</span><a class="headerlink" href="#lab4-8" title="Enlace permanente a esta imagen">¶</a></p>
 </div>
 </li>
 <li><p>Investigue sobre “Keeper” como una técnica para prevenir la descarga del nodo dinámico,  ¿Que  se  debe  tener  en  cuenta  cuando  se  dimensiona  este  elemento? Explique</p></li>
@@ -266,20 +284,20 @@
 </ol>
 </div>
 <div class="section" id="charge-sharing">
-<h3>Charge Sharing<a class="headerlink" href="#charge-sharing" title="Enlazar permanentemente con este título">¶</a></h3>
+<h3><a class="toc-backref" href="#id6">Charge Sharing</a><a class="headerlink" href="#charge-sharing" title="Enlazar permanentemente con este título">¶</a></h3>
 <ol class="arabic">
 <li><p>Investigue sobre el fenómeno de Charge Sharing. En términos de la capacitancia, de los nodos, escriba una ecuación que describa el valor de tensión del nodo dinámico</p></li>
 <li><p>Utilizando  la  nand  de  2  entradas  haga  una  simulación  donde  se  presente  este fenómeno</p>
 <div class="figure align-center" id="lab4-9">
 <a class="reference internal image-reference" href="../_images/Lab4_9.png"><img alt="../_images/Lab4_9.png" src="../_images/Lab4_9.png" style="width: 559.2px; height: 278.0px;" /></a>
-<p class="caption"><span class="caption-number">Figura 40 </span><span class="caption-text">Simulación del fenóneno charge sharing</span><a class="headerlink" href="#lab4-9" title="Enlace permanente a esta imagen">¶</a></p>
+<p class="caption"><span class="caption-number">Figura 78 </span><span class="caption-text">Simulación del fenóneno charge sharing</span><a class="headerlink" href="#lab4-9" title="Enlace permanente a esta imagen">¶</a></p>
 </div>
 </li>
 <li><p>Investigue  sobre  formas  como  se  evita  este  fenómeno,  implemente  alguna  de  ellas en el circuito y simule nuevamente.</p>
 <blockquote>
 <div><div class="figure align-center" id="lab4-10">
 <a class="reference internal image-reference" href="../_images/Lab4_10.png"><img alt="../_images/Lab4_10.png" src="../_images/Lab4_10.png" style="width: 559.2px; height: 278.40000000000003px;" /></a>
-<p class="caption"><span class="caption-number">Figura 41 </span><span class="caption-text">Simulación aplicando técnicas para evitar el fenóneno charge sharing</span><a class="headerlink" href="#lab4-10" title="Enlace permanente a esta imagen">¶</a></p>
+<p class="caption"><span class="caption-number">Figura 79 </span><span class="caption-text">Simulación aplicando técnicas para evitar el fenóneno charge sharing</span><a class="headerlink" href="#lab4-10" title="Enlace permanente a esta imagen">¶</a></p>
 </div>
 </div></blockquote>
 </li>

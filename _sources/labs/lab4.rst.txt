@@ -3,6 +3,9 @@ Laboratorio 4: Crear compuertas dinámicas
 
 En este laboratorio se trabaja con compuertas dinámicas y lógica dominó
 
+.. contents:: Contenidos del laboratorio
+    :depth: 4
+
 Objetivos
 *********
 *  Comprender el funcionamiento de las compuertas dinámicas y la lógica domino

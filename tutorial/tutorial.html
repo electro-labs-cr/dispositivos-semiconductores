@@ -1,0 +1,581 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Tutorial de laboratorio &mdash; documentación de Dispositivos Semiconductores - 1.0</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Laboratorio 0: Curvas del MOSFET" href="../labs/lab0.html" />
+    <link rel="prev" title="Instalación de herramientas" href="instalacion.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Dispositivos Semiconductores
+          
+
+          
+            
+            <img src="../_static/LogoUCR.png" class="logo" alt="Logotipo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Contenido:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="instalacion.html">Instalación de herramientas</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Tutorial de laboratorio</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#electric">Electric</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#creacion-de-una-celda">Creación de una celda</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#creacion-de-la-una-libreria-y-nueva-celda">Creación de la una librería y nueva celda</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#esquematico">Esquemático</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#icono">Ícono</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#layout">Layout</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#preparar-la-simulacion-en-spice">Preparar la simulación en Spice</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ltspice">LTSPICE</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#simular-en-ltspice">Simular en LTSPICE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#codigo-de-spice">Código de Spice</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#fuente-de-voltaje">Fuente de voltaje</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#componentes">Componentes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#notas-teoricas">Notas teóricas</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pendiente-de-las-senales">Pendiente de las señales</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../labs/lab0.html">Laboratorio 0: Curvas del MOSFET</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../labs/lab1.html">Laboratorio 1: Crear  y  simular un inversor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../labs/lab2.html">Laboratorio 2: Crear compuertas básicas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../labs/lab3.html">Laboratorio 3: Crear compuertas de paso</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../labs/lab4.html">Laboratorio 4: Crear compuertas dinámicas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../labs/lab5.html">Laboratorio 5: Celda compleja y algoritmos de placement (opcional)</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Dispositivos Semiconductores</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Tutorial de laboratorio</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/tutorial/tutorial.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tutorial-de-laboratorio">
+<h1><a class="toc-backref" href="#id1">Tutorial de laboratorio</a><a class="headerlink" href="#tutorial-de-laboratorio" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Este tutorial le enseñara a utilizar las herramientas para que pueda completar los laboratorios:</p>
+<div class="contents topic" id="contenidos-del-tutorial">
+<p class="topic-title">Contenidos del tutorial</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#tutorial-de-laboratorio" id="id1">Tutorial de laboratorio</a></p>
+<ul>
+<li><p><a class="reference internal" href="#electric" id="id2">Electric</a></p>
+<ul>
+<li><p><a class="reference internal" href="#creacion-de-una-celda" id="id3">Creación de una celda</a></p>
+<ul>
+<li><p><a class="reference internal" href="#creacion-de-la-una-libreria-y-nueva-celda" id="id4">Creación de la una librería y nueva celda</a></p></li>
+<li><p><a class="reference internal" href="#esquematico" id="id5">Esquemático</a></p></li>
+<li><p><a class="reference internal" href="#icono" id="id6">Ícono</a></p></li>
+<li><p><a class="reference internal" href="#layout" id="id7">Layout</a></p></li>
+<li><p><a class="reference internal" href="#preparar-la-simulacion-en-spice" id="id8">Preparar la simulación en Spice</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#ltspice" id="id9">LTSPICE</a></p>
+<ul>
+<li><p><a class="reference internal" href="#simular-en-ltspice" id="id10">Simular en LTSPICE</a></p></li>
+<li><p><a class="reference internal" href="#codigo-de-spice" id="id11">Código de Spice</a></p>
+<ul>
+<li><p><a class="reference internal" href="#fuente-de-voltaje" id="id12">Fuente de voltaje</a></p></li>
+<li><p><a class="reference internal" href="#componentes" id="id13">Componentes</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#notas-teoricas" id="id14">Notas teóricas</a></p>
+<ul>
+<li><p><a class="reference internal" href="#pendiente-de-las-senales" id="id15">Pendiente de las señales</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="electric">
+<h2><a class="toc-backref" href="#id2">Electric</a><a class="headerlink" href="#electric" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="creacion-de-una-celda">
+<h3><a class="toc-backref" href="#id3">Creación de una celda</a><a class="headerlink" href="#creacion-de-una-celda" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>A  lo  largo  de  los  laboratorios  se  creará  una  librería  con  diferentes  compuertas lógicas,  que  permitirán  crear  circuitos  más  complejos.  Como  referencia  en  esta  parte del tutorial se creará un inversor, tanto en su vista en esquemático como el layou</p>
+<div class="section" id="creacion-de-la-una-libreria-y-nueva-celda">
+<h4><a class="toc-backref" href="#id4">Creación de la una librería y nueva celda</a><a class="headerlink" href="#creacion-de-la-una-libreria-y-nueva-celda" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Inicie Electric, y seleccione File˖New libary, elija un nombre para la librería, la librería puede contener cuantas usted desea  y  es una buena forma de agrupar distintas celdas</p>
+<div class="figure align-center" id="tuto-1">
+<a class="reference internal image-reference" href="../_images/tuto_1.png"><img alt="../_images/tuto_1.png" src="../_images/tuto_1.png" style="width: 548.8000000000001px; height: 220.8px;" /></a>
+<p class="caption"><span class="caption-number">Figura 1 </span><span class="caption-text">Nueva librería</span><a class="headerlink" href="#tuto-1" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+<p>Para  crear  una  celda  dentro  de  la  librería  dé    click-derecho  sobre  la  librería  y seleccione  NewCell,  la  celda  puede  tener  múltiples  vistas  por  ejemplo    esquemático, layout  e icono.</p>
+<p>La  celda  que  se  construirá  como  ejemplo  será  un  inversor,  se  especificarán  los tamaños  de  los  transistores,  se  incluirán  parámetros  de  Spice  para  la  celda,  y  se utilizarán las herramientas DRC y NCC de Electric, todo esto para que poder tener una idea de cómo debe crear las celdas requeridas en el laboratorio.</p>
+</div>
+<div class="section" id="esquematico">
+<h4><a class="toc-backref" href="#id5">Esquemático</a><a class="headerlink" href="#esquematico" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Para crear la vista en esquemático seleccione la opción en la  siguiente ventana. Seleccione un nombre en este caso Inversor.</p>
+<div class="figure align-center" id="tuto2">
+<a class="reference internal image-reference" href="../_images/tuto_2.png"><img alt="../_images/tuto_2.png" src="../_images/tuto_2.png" style="width: 452.0px; height: 288.8px;" /></a>
+<p class="caption"><span class="caption-number">Figura 2 </span><span class="caption-text">Nueva celda</span><a class="headerlink" href="#tuto2" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+<p>Ahora dentro de la librería VLSI lab, usted podrá notar, una  celda Inversor{sch}, dando click sobre esta celda puede iniciar a editarla.</p>
+<p>Electric  define  varios  componentes  para  esquemáticos  y  layout,  para  observar los componentes disponibles para la creación de este primer esquemático, de click en la pestaña de componentes y seleccione schematic. Se observara entones la ventana de componentes  tal  como  se  muestra  en  la  <a class="reference internal" href="#tuto3"><span class="std std-numref">Figura 3</span></a>;  esta  lista  de  componentes incluye elementos básicos de un circuito como transistores, resistencias, capacitores.</p>
+<div class="figure align-center" id="tuto3">
+<a class="reference internal image-reference" href="../_images/tuto_3.png"><img alt="../_images/tuto_3.png" src="../_images/tuto_3.png" style="width: 202.8px; height: 303.6px;" /></a>
+<p class="caption"><span class="caption-number">Figura 3 </span><span class="caption-text">Ventana de componentes de la Librería</span><a class="headerlink" href="#tuto3" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+<p>El objetivo es dibujar una compuerta como la que se muestra  en la <a class="reference internal" href="#tuto4"><span class="std std-numref">Figura 4</span></a>. Seleccione Window˖Toggle grid para hacer visible grilla, esto le ayudara a alinear los objetos.    Dé  click-izquierdo  sobre  el  símbolo  de  transistor  nMOS,  en  la  ventana  de componentes  (al  lado  izquierdo  de  la  pantalla),  de  click-derecho  sobre  la  ventana  del esquemático para colocar el transistor. Repita lo anterior hasta que tenga, el transistor nMOS,   pMOS,   el   símbolo   de   Tierra   y   de   alimentación   en   la   ventana   de   su esquemático.  Para  mover  los  objetos  basta  con  dar  click-izquierdo  sobre  ellos  y arrastrarlos. El valor de largo/ancho de los transistores por defecto es 2/2, el ancho se puede  cambiar  dando  doble  click  sobre  los  transistores,  para  este  primer  inversor iniciaremos creando el pMOS de un ancho que sea el doble del ancho del nMOS. Los tamaños pueden ser 10𝞴para el pMOS y 5𝞴para el nMOS</p>
+<div class="figure align-center" id="tuto4">
+<a class="reference internal image-reference" href="../_images/tuto_4.png"><img alt="../_images/tuto_4.png" src="../_images/tuto_4.png" style="width: 245.60000000000002px; height: 316.8px;" /></a>
+<p class="caption"><span class="caption-number">Figura 4 </span><span class="caption-text">Esquemático del inversor</span><a class="headerlink" href="#tuto4" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+<p>Ahora, se deben hacer las conexiones para estos de click-izquierdo sobre alguno de  las  terminales  del  transistor,  ahora  de  click-derecho  sobre  alguna  terminal  del  otro transistor o componente.</p>
+<p>Se  necesitan  definir  los  puertos  (entradas,salidas)  de  la  celda.  Para  esto  se  debe seleccionar la entrada e ir a  Export • Create Export. Escoja un  nombre  y seleccione una característica en este caso Input. Se debe hacer lo mismo para la salida.</p>
+<div class="figure align-center" id="tuto5">
+<a class="reference internal image-reference" href="../_images/tuto_5.png"><img alt="../_images/tuto_5.png" src="../_images/tuto_5.png" style="width: 218.8px; height: 270.8px;" /></a>
+<p class="caption"><span class="caption-number">Figura 5 </span><span class="caption-text">Seleccionando la entrada</span><a class="headerlink" href="#tuto5" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+<p>Use  File˖Save  para  salvar  la  librería,  es  bueno  salvar  constantemente  los cambios.</p>
+</div>
+<div class="section" id="icono">
+<h4><a class="toc-backref" href="#id6">Ícono</a><a class="headerlink" href="#icono" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Cada  esquemático  tiene  un  símbolo  correspondiente,  llamado icono  usado  para representar la celda en un nivel de jerarquía superior. Se necesita crear un icono para el esquemático que se acaba de crear, para esto seleccionamos view˖MakeIconView.</p>
+<p>Electric  creará  un  icono  genérico  y  lo  colocara  en  la  vista  de  esquemático.  Sin embargo  el  esquemático  es  más  fácil  de  leer  cuando  el  icono  usado    nos  resulta familiar,  en  lugar  de    las  cajas  genéricas  que  Electric  crea,  por  lo  que  es  buena  idea modificar este icono para obtener el símbolo representativo de un inversor.</p>
+<p>Para editar el icono, damos click sobre él y seleccionamos Cell˖DonwHierarchy, borramos  la  caja  genérica  y  utilizamos  las  distintas  formas  para  crear  un  inversor,  es buena idea mantener la grilla encendida para que la entrada y salida queden alineadas.</p>
+</div>
+<div class="section" id="layout">
+<h4><a class="toc-backref" href="#id7">Layout</a><a class="headerlink" href="#layout" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Ahora crearemos el layout. Vaya a Cell˖NewCell  y seleccione la vista de layout, utilice el mismo nombre que uso para el esquemático. Al hacer esto la librería se verá como se muestra a continuación, donde  la celda Inversor tiene tres vistas.</p>
+<div class="figure align-center" id="tuto6">
+<a class="reference internal image-reference" href="../_images/tuto_6.png"><img alt="../_images/tuto_6.png" src="../_images/tuto_6.png" style="width: 260.40000000000003px; height: 295.6px;" /></a>
+<p class="caption"><span class="caption-number">Figura 6 </span><span class="caption-text">Celda del inversor</span><a class="headerlink" href="#tuto6" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+<p>Todas  las  celdas  se  construirán  usando  la  tecnología  mocmos  (tecnología MOSIS CMOS),  vaya a File˖Preferences˖Tecnology,  seleccione mocmos, 3 capas de metal, 2 de poli y opción de submicron rules. También es necesario cambiar la escala a para esto vaya  a File˖ Preferences ˖Scale seleccione 300 nm.</p>
+<div class="figure align-center" id="tuto7">
+<a class="reference internal image-reference" href="../_images/tuto_7.png"><img alt="../_images/tuto_7.png" src="../_images/tuto_7.png" style="width: 454.0px; height: 317.20000000000005px;" /></a>
+<p class="caption"><span class="caption-number">Figura 7 </span><span class="caption-text">Tecnología mocmos</span><a class="headerlink" href="#tuto7" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+<p>Es importante escoger un “estilo” consistente para dibujar las celdas de forma que cuando se necesite construir circuitos más complejos, las celdas de nuestra librería puedan “calzar” unas con otras similar a un LEGO. Para este laboratorio Vcc y Vss deberán correr de forma horizontal en la parte superior e inferior de la celda en  metal 1,  el espacio entre Vcc  y  Vss será de 80 λde centro a centro.  Los transistores nmos ocuparan la parte inferior de la celda y los pmos la parte superior; las entradas y salidas se conectaran por medio de contactos de metal 2, aparte de esto las ningún metal2 o 3 deberá ser utilizado dentro de las celdas. Teniendo esto en cuenta se iniciará a construir el inversor.</p>
+<p>Empiece  por  colocar  el  transistor  nmos.  Usted  notara  una  pequeña  cruz  en  la pantalla, este es el centro o origen (0,0), dibuje el su inversor a una buena distancia del centro al terminar el layout  moveremos el inversor a la posición correcta.</p>
+<p>En  la  pestaña  de  componentes  se  encuentra  el  transistor  nmos,  colóqueloen  la ventana, recuerde que un transistor nmos se forma cuando poli-silicio cruza sobre una difusión N, en Electric la difusión n es representada como una difusión verde rodeada de  capa  punteada  de  color  amarillo,  y  la  capa  sombreada  de  color  amarillo  que“contiene” el transistor representa el pozo de material P.</p>
+<div class="figure align-center" id="tuto8">
+<a class="reference internal image-reference" href="../_images/tuto_8.png"><img alt="../_images/tuto_8.png" src="../_images/tuto_8.png" style="width: 260.7px; height: 229.5px;" /></a>
+<p class="caption"><span class="caption-number">Figura 8 </span><span class="caption-text">Trasistor Nmos</span><a class="headerlink" href="#tuto8" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+<p>Ahora  rotemos  el  transistor  para  que  la  capa  de  poli-silicio  quede  de  forma vertical, esto lo puede hacer en Edit˖Rotate  o  también  haciendo  doble  click  sobre  el transistor,  con  esta  última  opción  también  se  pueden  cambiar  otras  propiedades  del componente incluyendo  el ancho.  Ahora  coloque un transistor Pmos, rótelo 90 grados y cambie su tamaño  a 5𝞴.</p>
+<div class="figure align-center" id="tuto9">
+<a class="reference internal image-reference" href="../_images/tuto_9.png"><img alt="../_images/tuto_9.png" src="../_images/tuto_9.png" style="width: 459.20000000000005px; height: 290.40000000000003px;" /></a>
+<p class="caption"><span class="caption-number">Figura 9 </span><span class="caption-text">Propiedades del transistor</span><a class="headerlink" href="#tuto9" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+<div class="section" id="modelos-de-spice-para-los-transistores">
+<h5>Modelos de Spice para los transistores<a class="headerlink" href="#modelos-de-spice-para-los-transistores" title="Enlazar permanentemente con este título">¶</a></h5>
+<p>Para poder tener la posibilidad de simular las compuertas que se crean a lo largo del  laboratorio  la  es    necesario  establecer  el  modelo de  Spice  para  los  transistores, seleccione  el  transistor  Pmos  y  vaya  a  Tools˖Spice˖SetSpiceModel,  al  hacer  esto aparecerá un texto sobre el transistor.</p>
+<div class="figure align-center" id="tuto10">
+<a class="reference internal image-reference" href="../_images/tuto_10.png"><img alt="../_images/tuto_10.png" src="../_images/tuto_10.png" style="width: 138.8px; height: 216.8px;" /></a>
+<p class="caption"><span class="caption-number">Figura 10 </span><span class="caption-text">Estableciendo el modelo de Spice</span><a class="headerlink" href="#tuto10" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+<p>Debemos cambiar este texto a PMOS para esto nos posicionamos sobre el texto y con Crtl+I lo editamos.</p>
+<div class="figure align-center" id="tuto10-5">
+<a class="reference internal image-reference" href="../_images/tuto_10_5.png"><img alt="../_images/tuto_10_5.png" src="../_images/tuto_10_5.png" style="width: 365.4px; height: 349.2px;" /></a>
+<p class="caption"><span class="caption-number">Figura 11 </span><span class="caption-text">Cambiando el modelo a PMOS</span><a class="headerlink" href="#tuto10-5" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+<p>Hacemos lo mismo con el transistor NMOS, cambiando el modelo a NMOS.</p>
+<div class="figure align-center" id="tuto11">
+<a class="reference internal image-reference" href="../_images/tuto_11.png"><img alt="../_images/tuto_11.png" src="../_images/tuto_11.png" style="width: 93.0px; height: 198.29999999999998px;" /></a>
+<p class="caption"><span class="caption-number">Figura 12 </span><span class="caption-text">Modelo de Spice transistor NMOS</span><a class="headerlink" href="#tuto11" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+<p>Una  vez  que  se  establecieron  los  modelos  de  Spice   es  posible   continuar dibujando el layout para  el inversor. Conecte los  poli-silicio, haciendo click izquierdo en el  extremo  inferior  del  pMOS  y  click  derecho  en  el  extremo  superior  del  nMOS. Para este punto usted deberá tener su diseño como se muestra a continuación.</p>
+<div class="figure align-center" id="tuto12">
+<a class="reference internal image-reference" href="../_images/tuto_12.png"><img alt="../_images/tuto_12.png" src="../_images/tuto_12.png" style="width: 159.0px; height: 346.5px;" /></a>
+<p class="caption"><span class="caption-number">Figura 13 </span><span class="caption-text">Inversor: conexión PMOSy NMOS</span><a class="headerlink" href="#tuto12" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+<p>Hay  que  crear    contactos  a  ambos  lados  en  el sourcey drainde  cada  transistor. Para  eso,  seleccionamos    Metal-1-Active-Contact  n  o  p,  según  corresponda.  Para  el transistor n, seleccionamos el nAct,  y lo creamos a alguna distancia a la izquierda del transistor n. Hacemos doble click sobre el contacto y fijamos su valor y en 4 (el mismo que  el  transistor).  Se  ocupan  dos  contactos  ya  uno  está  hecho,  para  duplicarlo seleccionamos  el  objeto  y  presionamos  CTRL-M,  colocamos  este  otro  contacto  a  la derecha del transistor nMOS.</p>
+<p>Antes de acercarlo  al drain y source debemos  realizar las conexiones, hacemos click  izquierdo  sobre  el  contacto    y  luego  hacemos  click  derecho  sobre  el draino source.</p>
+<div class="figure align-center" id="tuto13">
+<a class="reference internal image-reference" href="../_images/tuto_13.png"><img alt="../_images/tuto_13.png" src="../_images/tuto_13.png" style="width: 331.20000000000005px; height: 264.0px;" /></a>
+<p class="caption"><span class="caption-number">Figura 14 </span><span class="caption-text">Inversor: contactos</span><a class="headerlink" href="#tuto13" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+</div>
+<div class="section" id="drc">
+<h5>DRC<a class="headerlink" href="#drc" title="Enlazar permanentemente con este título">¶</a></h5>
+<p>Antes de acercar los contactos a la difusión utilizaremos la herramienta DRC de Electric  que  indica  las  violaciones  de  reglas  en  nuestro  layout.  Seleccionamos  en  el menú: Tools, DRC, Check Hierarchically,  o solo presionamos F5.</p>
+<p>No  debería haber  errores.  Si  los  hubiera,  presionando  &gt;  o  &lt;  se  puede  ver  todos los errores .El error aparecerá en la ventana de mensajes y se señalará en la ventana del layout  tal  y  como  se  muestra  a  continuación.  También  se  pueden  observar  los  errores en la pestaña Explorer.</p>
+<div class="figure align-center" id="tuto14">
+<a class="reference internal image-reference" href="../_images/tuto_14.png"><img alt="../_images/tuto_14.png" src="../_images/tuto_14.png" style="width: 675.0px; height: 497.4px;" /></a>
+<p class="caption"><span class="caption-number">Figura 15 </span><span class="caption-text">DRC</span><a class="headerlink" href="#tuto14" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+<p>Hay que acercar los contactos al transistor tanto como sea posible, sin violar las reglas de diseño que en este caso son 3𝞴. Para eso es más fácil mostrar el cuadriculado, el cual está en distancias de lambda, en el menú: Window, Toggle Grid.</p>
+<p>Ahora  agreguemos  Vcc  y  tierra.  Las  líneas  deben  ser  de  un  ancho  de  8 λ,  para agregar  la  línea  seleccione  metal-1-pin,  dibujar  la  líneaen  el  lado  derecho  usando primer el click izquierdo y luego el click derecho, dando doble click en la línea cambie el  ancho  a  8 λ,  ahora  colocaremos  estas  líneas  a  una  distancia  de  80 λ,  para  realizar mediciones vamos a Window˖Measurements˖ ToggleMeasumentMode.</p>
+<div class="figure align-center" id="tuto15">
+<a class="reference internal image-reference" href="../_images/tuto_15.png"><img alt="../_images/tuto_15.png" src="../_images/tuto_15.png" style="width: 267.0px; height: 400.5px;" /></a>
+<p class="caption"><span class="caption-number">Figura 16 </span><span class="caption-text">Inversor: líneasde Vcc y Vss</span><a class="headerlink" href="#tuto15" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+<p>Ahora  acerque  los  transistores  a  una  distancia  de  1  lamda  de  la  líneas  de  metal que  acabamos  de  crear,  de  mantenga  el  click  izquierdo  presionado  para arrastrar  el transistor.</p>
+<p>Para  realizar  la  conexión  entre  el  metal  1  y  los  contactos,    haga  click  izquierdo sobre el contacto y click derecho sobre el metal 1, si el ancho de esta conexión resulta ser  de  8𝞴,  de  doble  click  sobre  el  cable  para  cambiar  las  propiedades  y  ajustar  el ancho a 4 𝞴</p>
+<p>Cuando haya terminado de realizar estas conexiones, debe extender las líneas de  Vcc  y  Vss,  2𝞴más  allá  del  contenido  de  la  celda.  Esto  para  que  al  conectar  distintas celdas  su  contenido  estén  separados  por  una  distancia  de  4 λy  se  cumpla  así  con  las reglas de diseño.</p>
+<div class="figure align-center" id="tuto16">
+<a class="reference internal image-reference" href="../_images/tuto_16.png"><img alt="../_images/tuto_16.png" src="../_images/tuto_16.png" style="width: 259.2px; height: 296.0px;" /></a>
+<p class="caption"><span class="caption-number">Figura 17 </span><span class="caption-text">Inversor: Vss y Vcc</span><a class="headerlink" href="#tuto16" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+<p>Su layout debe verse similar a la figura que se muestra a continuación, recuerde utilizar  contantemente  la  herramienta DRC,  para  verificar  que  la  celda  cumpla  las reglas de diseño.</p>
+<div class="figure align-center" id="tuto17">
+<a class="reference internal image-reference" href="../_images/tuto_17.png"><img alt="../_images/tuto_17.png" src="../_images/tuto_17.png" style="width: 202.5px; height: 396.0px;" /></a>
+<p class="caption"><span class="caption-number">Figura 18 </span><span class="caption-text">Inversor</span><a class="headerlink" href="#tuto17" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+<p>Recuerde  que  es  necesario  colocar  contactos  en  los  pozos  para  evitar  que  los diodos BJT que se forman entre  pozo   y source/drain se polaricen. Pondremos Nwell taps  and  P-well  taps  en  cada  celda  sobre  los  cables  de  Vcc  y  Vss  cada,  estos  se encuentran en la ventana de componentes.</p>
+<p>Colocamos los taps de vdd seleccionando Metal-1-P-Well-Con para el pozo P  y colocándolo “encima” del metal del GN. Se colocan al menos 2 taps, al menos a 3 lambdas  de  distancia  entre  ellos.  Luego  de  conectar  cada  uno  hay  que  conectarlo  al metal por medio de la combinación click-izquierdo-click-derecho. Se realiza lo mismo  con Vdd, usando Metal-1-N-Well-Con.Su  compuerta  debe  lucir  como  se  muestra  en la siguiente figura.</p>
+<div class="figure align-center" id="tuto18">
+<a class="reference internal image-reference" href="../_images/tuto_18.png"><img alt="../_images/tuto_18.png" src="../_images/tuto_18.png" style="width: 173.5px; height: 372.0px;" /></a>
+<p class="caption"><span class="caption-number">Figura 19 </span><span class="caption-text">Inversor: taps</span><a class="headerlink" href="#tuto18" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+<p>Ahora   conectaremos      la   entrada   al   poli-silicio,   usando   el   ícono   Metal-1-Polisilicon-1-Contact.  Lo  colocamos  unos  cuantos  lambdas  a  la  izquierda  del  poli-silicio y lo conectamos con el click derecho, también debemos realizar la conexión de metal 1 para la salida del inversor y colocar un contacto de metal 1 metal2 (vía).</p>
+<p>Solo falta exportar la entrada, salida, Vcc y Vss y su compuerta debe lucir como se muestra en la figura a continuación</p>
+<div class="figure align-center" id="tuto19">
+<a class="reference internal image-reference" href="../_images/tuto_19.png"><img alt="../_images/tuto_19.png" src="../_images/tuto_19.png" style="width: 162.5px; height: 393.0px;" /></a>
+<p class="caption"><span class="caption-number">Figura 20 </span><span class="caption-text">Inversor contactos de entrada y salida</span><a class="headerlink" href="#tuto19" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+<p>Para exportar la entrada seleccionamos  el contacto, y en Export˖CreateExport se le  debe  dar  un  nombre,  se  hace  lo  mismo  con  la  salida.  Para  Vcc   y  Vss  el procedimiento  es  similar  solo  que  en  este  caso  en  característica  se  debe  seleccionar power   o   gnd   según   corresponda,   Electric   reconoce   vdd   y   gnd   como   nombres especiales, asegúrese por lo tanto de usar esos nombres.</p>
+<div class="figure align-center" id="tuto20">
+<a class="reference internal image-reference" href="../_images/tuto_20.png"><img alt="../_images/tuto_20.png" src="../_images/tuto_20.png" style="width: 426.0px; height: 361.5px;" /></a>
+<p class="caption"><span class="caption-number">Figura 21 </span><span class="caption-text">Inversor: exportando la entrada</span><a class="headerlink" href="#tuto20" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+<p>Al terminar la compuerta verifique nuevamente que  la compuerta cumpla con las reglas de diseño.</p>
+<p>La  última  tarea  consiste  en  posicionar  la  celda  en  lugar  correcta,  centrarla facilitara  conexiones  en  otros  circuitos.  Para  esto  utilizamos  el  botón Toggle-special-select selecionanos el  centro  de  la  ventana  y  arrastramos  el  símbolo  de  cruz  al centro de nuestra celda.</p>
+</div>
+<div class="section" id="ncc">
+<h5>NCC<a class="headerlink" href="#ncc" title="Enlazar permanentemente con este título">¶</a></h5>
+<p>Electric puede comparar dos celdas diferentes para determinar si tienen la misma topología.  Esta  operación  se  llama  Layout  vrs  Squematic,  es  un  tipo  de  verificación formal,  pero  Electric  puede  comparar  dos  circuitos,  sin  importar  que  ambos  sean esquemáticos   o   layout   por   eso   en   Electric   se   usa   el   término   NCC   (Network Consistency Checking).</p>
+<p>Vaya a File˖Preferences˖Tools˖NCC y asegúrese que las opciones marcadas sean iguales a las siguientes</p>
+<div class="figure align-center" id="tuto22">
+<a class="reference internal image-reference" href="../_images/tuto_22.png"><img alt="../_images/tuto_22.png" src="../_images/tuto_22.png" style="width: 427.0px; height: 397.0px;" /></a>
+<p class="caption"><span class="caption-number">Figura 22 </span><span class="caption-text">Preferencias para NCC</span><a class="headerlink" href="#tuto22" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+<p>Ahora   corrobore   que   su   esquemático   y   layout   sean   equivalentes,   vaya   a Tools˖NCC˖SchematicandLayoutViews… Si no hay ninguna diferencia en la ventana de mensajes de Electric deberá observar el siguiente mensaje.</p>
+<div class="figure align-center" id="tuto23">
+<a class="reference internal image-reference" href="../_images/tuto_23.png"><img alt="../_images/tuto_23.png" src="../_images/tuto_23.png" style="width: 635.0px; height: 101.0px;" /></a>
+<p class="caption"><span class="caption-number">Figura 23 </span><span class="caption-text">LVS</span><a class="headerlink" href="#tuto23" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+<p>Si existiera alguna diferencia, entonces observara una ventana como la siguiente, corrija su celda si es necesario.</p>
+<div class="figure align-center" id="tuto24">
+<a class="reference internal image-reference" href="../_images/tuto_24.png"><img alt="../_images/tuto_24.png" src="../_images/tuto_24.png" style="width: 533.0px; height: 292.5px;" /></a>
+<p class="caption"><span class="caption-number">Figura 24 </span><span class="caption-text">Mensajes de la herramienta NCC</span><a class="headerlink" href="#tuto24" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+<p>Si desea  conocer  los  detalles  se  debe  hacer  click  sobre  las  diferencias  del  lado izquierdo de la ventana de mensajes del NCC</p>
+<div class="figure align-center" id="tuto25">
+<a class="reference internal image-reference" href="../_images/tuto_25.png"><img alt="../_images/tuto_25.png" src="../_images/tuto_25.png" style="width: 550.0px; height: 298.5px;" /></a>
+<p class="caption"><span class="caption-number">Figura 25 </span><span class="caption-text">Diferencia reportadas por NCC</span><a class="headerlink" href="#tuto25" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="preparar-la-simulacion-en-spice">
+<h4><a class="toc-backref" href="#id8">Preparar la simulación en Spice</a><a class="headerlink" href="#preparar-la-simulacion-en-spice" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Electric puede generar archivos de entrada para diferentes simuladores externos, en  nuestro  caso  usaremos  LTspice.  Pero  antes  de  realizar  una  simulación  se  deben cambiar algunas de las preferencias que Electric tiene por defecto.</p>
+<p>En File˖Preferences, en la sección “Tools” seleccionamos Spice, y cambiamos las preferencias a las que se muestran a continuación.</p>
+<div class="figure align-center" id="tuto26">
+<a class="reference internal image-reference" href="../_images/tuto_26.png"><img alt="../_images/tuto_26.png" src="../_images/tuto_26.png" style="width: 545.0px; height: 393.0px;" /></a>
+<p class="caption"><span class="caption-number">Figura 26 </span><span class="caption-text">File/Preferences/Tools/Spice</span><a class="headerlink" href="#tuto26" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+<p>Verifique  los  transistores  de  la  celda  que  desea  simular  tengan  definido  el modelo de Spice, ya sea NMOS o PMOS para hacer esto seleccione el transistor y vaya a Tools˖Spice˖SetSpiceModel, al hacer esto aparecerá un texto sobre el transistor que deberá cambiar a PMOS o NMOS.</p>
+<p>Siempre  que  se  vaya  a  hacer  una  simulación  copiaremos  la  celda  que  deseamos simular  y  cambiaremos  su  nombre,  debe  ser  un  nombre  representativo  por  ejemplo Inversor_lay_sim. Como ejemplo realizaremos la simulación para un inversor.</p>
+<p>Primero creamos una nueva celda en vista de layout o esquemático según lo que se  desee  simular,  vamos  a  Cell˖PlaceCellInstanse  y  seleccionamos  la  celda  que deseamos simular en este caso Inversor {lay}</p>
+<div class="figure align-center" id="tuto27">
+<a class="reference internal image-reference" href="../_images/tuto_27.png"><img alt="../_images/tuto_27.png" src="../_images/tuto_27.png" style="width: 443.5px; height: 316.5px;" /></a>
+<p class="caption"><span class="caption-number">Figura 27 </span><span class="caption-text">Nueva versión de la celda para simulación</span><a class="headerlink" href="#tuto27" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+<p>Usted deberá tener algo similar a lo que se muestra a continuación.</p>
+<div class="figure align-center" id="tuto28">
+<a class="reference internal image-reference" href="../_images/tuto_28.png"><img alt="../_images/tuto_28.png" src="../_images/tuto_28.png" style="width: 555.5px; height: 302.5px;" /></a>
+<p class="caption"><span class="caption-number">Figura 28 </span><span class="caption-text">Nueva celda para simulación</span><a class="headerlink" href="#tuto28" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+<p>Si  observa  con  atención  podrá  notar  que  los  puertos  que  se  exportaron  están  se pueden  ver  en  esta  celda  vamos  a  conectar  estos  puertos  y  darles  un  nombre  para  la simulación en Spice. Para conectarlos basta con hacer click sobre los puertos y dar otro clicken otro lugar de la ventana. Ahora para cambiar el nombre solo es necesario hacer doble click sobre las líneas de metal y cambiar el nombre de la “net”.</p>
+<div class="figure align-center" id="tuto29">
+<a class="reference internal image-reference" href="../_images/tuto_29.png"><img alt="../_images/tuto_29.png" src="../_images/tuto_29.png" style="width: 281.5px; height: 371.0px;" /></a>
+<p class="caption"><span class="caption-number">Figura 29 </span><span class="caption-text">Conexiones y nombres para la simulación</span><a class="headerlink" href="#tuto29" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+<p>Ahora se debe  incorporar el código de Spice que se desea simular, en las pestaña de componentes seleccionamos MISC ˖SpiceCode. De Click sobre la ventana para colocar el texto, y ahora presione Crtl+I para modificarlo.</p>
+<div class="figure align-center" id="tuto30">
+<a class="reference internal image-reference" href="../_images/tuto_30.png"><img alt="../_images/tuto_30.png" src="../_images/tuto_30.png" style="width: 257.6px; height: 285.2px;" /></a>
+<p class="caption"><span class="caption-number">Figura 30 </span><span class="caption-text">Ventana donde se incorpora el códido de Spice</span><a class="headerlink" href="#tuto30" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+<p>De click en Ok y ahora pondrá ver este código en la ventana donde esta su celda para  simulación,  modifique  el  tamaño  del  texto  para  que  sea  visible  y  de  click  en  la opción  de  multilinea. Como  ejemplo  para  esta  simulación  cambiaremos  el  voltaje  de entrada  de  0  a  5  volts,  y  no  pondremos  ninguna  carga  la  salida  de  la  compuerta. Debemos  incluir  el  archivo spice.txt que  el  archivo  que  contiene  los  parámetros  para simulación  de  Spice,  estos  parámetros  son  para  un  proceso  subsidiado  por  MOSIS, asegúrese  de  incluireste  archivo  de  forma  correcta  y  de  que  los  nombres  de  las conexiones que realizó correspondan a los nombres del código de Spice.</p>
+<div class="figure align-center" id="tuto31">
+<a class="reference internal image-reference" href="../_images/tuto_31.png"><img alt="../_images/tuto_31.png" src="../_images/tuto_31.png" style="width: 406.8px; height: 297.6px;" /></a>
+<p class="caption"><span class="caption-number">Figura 31 </span><span class="caption-text">Celda lista para la simulación</span><a class="headerlink" href="#tuto31" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+<p>Para  este  punto  tal  vez  no  comprenda  este  código  de  Spice,  por  lo  que  en  la siguiente sección Código de Spice  se detalla las opciones que se pueden  utilizar para otro tipo de simulaciones.</p>
+<p>Ahora   generaremos  el   código  para  Spice  ,vaya  a  Tools/Simulation(Spice)/ WriteSpiceDeck. Con estose creara un archivo de extensión .spi que es la entrada para la simulación en LTspice.</p>
+</div>
+</div>
+</div>
+<div class="section" id="ltspice">
+<h2><a class="toc-backref" href="#id9">LTSPICE</a><a class="headerlink" href="#ltspice" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>La  herramienta  para  simulación  es  un  simulador  de  SPICE  de  código  abierto,  y es compatible con Electric,  de forma que los archivos de Spice generados por Electric funcionan perfectamente en la herramienta de simulación</p>
+<div class="section" id="simular-en-ltspice">
+<h3><a class="toc-backref" href="#id10">Simular en LTSPICE</a><a class="headerlink" href="#simular-en-ltspice" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Abrá LTSpice y vaya File˖Open y busque el archivo que desea simular.</p>
+<div class="figure align-center" id="tuto32">
+<a class="reference internal image-reference" href="../_images/tuto_32.png"><img alt="../_images/tuto_32.png" src="../_images/tuto_32.png" style="width: 535.0px; height: 314.0px;" /></a>
+<p class="caption"><span class="caption-number">Figura 32 </span><span class="caption-text">Archivo .spi en LTspice</span><a class="headerlink" href="#tuto32" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+<p>Para  correr  la  simulación  de  click  en  el  botón <a class="reference internal" href="../_images/tuto_ico1.png"><img alt="run_ico" src="../_images/tuto_ico1.png" style="width: 32.5px; height: 34.5px;" /></a>,  ahora  tendrá  una  nueva ventana  en esta es donde se  grafican los resultados de la simulación, vaya a <a class="reference internal" href="../_images/tuto_ico2.png"><img alt="wave_ico" src="../_images/tuto_ico2.png" style="width: 38.25px; height: 37.25px;" /></a> para seleccionar las señales que desea graficar.</p>
+<div class="figure align-center" id="tuto33">
+<a class="reference internal image-reference" href="../_images/tuto_33.png"><img alt="../_images/tuto_33.png" src="../_images/tuto_33.png" style="width: 651.5px; height: 319.5px;" /></a>
+<p class="caption"><span class="caption-number">Figura 33 </span><span class="caption-text">Selección de las señales</span><a class="headerlink" href="#tuto33" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+<p>El grafico  para el inversor construido en la etapa anterior debería verse como  el siguiente</p>
+<div class="figure align-center" id="tuto34">
+<a class="reference internal image-reference" href="../_images/tuto_34.png"><img alt="../_images/tuto_34.png" src="../_images/tuto_34.png" style="width: 615.2px; height: 300.40000000000003px;" /></a>
+<p class="caption"><span class="caption-number">Figura 34 </span><span class="caption-text">Curva característica del inversor</span><a class="headerlink" href="#tuto34" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+<p>También se puede graficar en distintas ventanas, por medio de la opción “Add Plot Pane”</p>
+<div class="figure align-center" id="tuto35">
+<a class="reference internal image-reference" href="../_images/tuto_35.png"><img alt="../_images/tuto_35.png" src="../_images/tuto_35.png" style="width: 387.0px; height: 401.4px;" /></a>
+<p class="caption"><span class="caption-number">Figura 35 </span><span class="caption-text">Como agregar ventanas para graficar</span><a class="headerlink" href="#tuto35" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+<p>Se pueden agregar tantas ventanas como se desee en este caso se agregó una más para visualizar el voltaje de entrada y el de salida en distintas ventanas</p>
+<div class="figure align-center" id="tuto36">
+<a class="reference internal image-reference" href="../_images/tuto_36.png"><img alt="../_images/tuto_36.png" src="../_images/tuto_36.png" style="width: 512.8000000000001px; height: 268.0px;" /></a>
+<p class="caption"><span class="caption-number">Figura 36 </span><span class="caption-text">Dos ventanas de gráficos</span><a class="headerlink" href="#tuto36" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+<p>Para visualizar un punto con mayor detalle se pueden usar las opciones de zoom</p>
+<div class="figure align-center" id="tuto37">
+<a class="reference internal image-reference" href="../_images/tuto_37.png"><img alt="../_images/tuto_37.png" src="../_images/tuto_37.png" style="width: 173.60000000000002px; height: 51.6px;" /></a>
+<p class="caption"><span class="caption-number">Figura 37 </span><span class="caption-text">Opciones de zoom</span><a class="headerlink" href="#tuto37" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+<p>Y en la parte inferior izquierda de la pantalla se puede observar las coordenadas del punto.</p>
+</div>
+<div class="section" id="codigo-de-spice">
+<h3><a class="toc-backref" href="#id11">Código de Spice</a><a class="headerlink" href="#codigo-de-spice" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="section" id="fuente-de-voltaje">
+<h4><a class="toc-backref" href="#id12">Fuente de voltaje</a><a class="headerlink" href="#fuente-de-voltaje" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Spice tiene varias  fuentes de voltaje: SINE, PULSE,AC, DC. A continuación se muestra un ejemplo para cada una de ellas.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">DC</span><span class="p">(</span> <span class="p">{</span><span class="n">v1</span><span class="p">}</span> <span class="p">{</span><span class="n">v2</span><span class="p">}{</span><span class="n">distancia</span> <span class="n">entre</span> <span class="n">puntos</span><span class="p">})</span>
+<span class="n">DC</span> <span class="n">Vin</span> <span class="mi">0</span> <span class="mi">5</span> <span class="mi">1</span><span class="n">m</span>
+
+<span class="n">PULSE</span><span class="p">(</span> <span class="p">{</span><span class="n">v1</span><span class="p">}</span> <span class="p">{</span><span class="n">v2</span><span class="p">}</span> <span class="p">{</span><span class="n">tdelay</span><span class="p">}</span> <span class="p">{</span><span class="n">𝑡𝑟</span><span class="p">}</span> <span class="p">{</span><span class="n">𝑡𝑓</span><span class="p">}</span> <span class="p">{</span><span class="n">tiempo</span> <span class="n">en</span> <span class="n">bajo</span><span class="p">}</span> <span class="p">{</span><span class="n">periodo</span><span class="p">}</span> <span class="p">)</span>
+
+<span class="n">Vin</span> <span class="n">In</span> <span class="n">GND</span> <span class="n">DC</span> <span class="mi">0</span> <span class="n">Pulse</span> <span class="mi">0</span> <span class="mi">5</span> <span class="mi">1</span><span class="n">n</span> <span class="mi">1</span><span class="n">n</span> <span class="mi">1</span><span class="n">n</span> <span class="mi">10</span><span class="n">n</span> <span class="mi">20</span><span class="n">n</span>
+
+<span class="n">SIN</span><span class="p">({</span><span class="n">voffset</span><span class="p">}</span> <span class="p">{</span><span class="n">amplitud</span><span class="p">}</span> <span class="p">{</span><span class="n">freq</span><span class="p">}</span> <span class="p">{</span><span class="n">tdelay</span><span class="p">})</span>
+<span class="n">Vin</span> <span class="n">In</span> <span class="n">GND</span> <span class="n">DC</span> <span class="mi">0</span> <span class="n">Sin</span> <span class="mi">4</span> <span class="mi">1</span> <span class="mi">10000</span><span class="n">kHz</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="componentes">
+<h4><a class="toc-backref" href="#id13">Componentes</a><a class="headerlink" href="#componentes" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>En  Spice  se  pueden  colocar  muchos  componentes  por  ejemplo  resistencias, capacitores, inductores , diodos, líneas de transmisión  y muchos otros.</p>
+<p>Capacitor</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">C</span><span class="p">{</span><span class="n">nombre</span><span class="p">}</span> <span class="p">{</span><span class="o">+</span><span class="n">nodo</span><span class="p">}</span> <span class="p">{</span><span class="o">-</span><span class="n">nodo</span><span class="p">}</span> <span class="p">[{</span><span class="n">modelo</span><span class="p">}]</span> <span class="p">{</span><span class="n">valor</span><span class="p">}</span>
+<span class="n">CLOAD</span>  <span class="n">Out</span>  <span class="mi">0</span>  <span class="mi">20</span><span class="n">pF</span>
+</pre></div>
+</div>
+<p>Resistencia</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">R</span><span class="p">{</span><span class="n">nombre</span><span class="p">}</span>  <span class="p">{</span><span class="o">+</span><span class="n">nodo</span><span class="p">}</span> <span class="p">{</span><span class="o">-</span><span class="n">nodo</span><span class="p">}</span> <span class="p">[{</span><span class="n">modelo</span><span class="p">}]</span> <span class="p">{</span><span class="n">valor</span><span class="p">}</span>
+<span class="n">RLOAD</span>  <span class="n">Out</span>  <span class="mi">0</span>  <span class="mi">2</span><span class="n">k</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="notas-teoricas">
+<h2><a class="toc-backref" href="#id14">Notas teóricas</a><a class="headerlink" href="#notas-teoricas" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="pendiente-de-las-senales">
+<h3><a class="toc-backref" href="#id15">Pendiente de las señales</a><a class="headerlink" href="#pendiente-de-las-senales" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Los cambios de estado  en una señal digital no son instantáneos, la transición de un uno lógico a un cero lógico o viceversa toma cierta cantidad de tiempo de forma que se la transición tiene una pendiente o “slope”.</p>
+<div class="figure align-center" id="tuto38">
+<a class="reference internal image-reference" href="../_images/tuto_38.png"><img alt="../_images/tuto_38.png" src="../_images/tuto_38.png" style="width: 565.6px; height: 249.20000000000002px;" /></a>
+<p class="caption"><span class="caption-number">Figura 38 </span><span class="caption-text">Pendiente</span><a class="headerlink" href="#tuto38" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+<p>Para referirnos a la pendiente que se muestra en la figura anterior, se dice que la pendiente es de un 100% en 5 ns</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../labs/lab0.html" class="btn btn-neutral float-right" title="Laboratorio 0: Curvas del MOSFET" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="instalacion.html" class="btn btn-neutral float-left" title="Instalación de herramientas" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Derechos de autor 2021, Loriana Sanabria - Oscar Villalta.
+
+    </p>
+  </div>
+    
+    
+    
+    Construido con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

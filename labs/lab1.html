@@ -94,6 +94,8 @@
             
               <p class="caption" role="heading"><span class="caption-text">Contenido:</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/instalacion.html">Instalación de herramientas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/tutorial.html">Tutorial de laboratorio</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lab0.html">Laboratorio 0: Curvas del MOSFET</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Laboratorio 1: Crear  y  simular un inversor</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#objetivos">Objetivos</a></li>
@@ -179,10 +181,29 @@
            <div itemprop="articleBody">
             
   <div class="section" id="laboratorio-1-crear-y-simular-un-inversor">
-<h1>Laboratorio 1: Crear  y  simular un inversor<a class="headerlink" href="#laboratorio-1-crear-y-simular-un-inversor" title="Enlazar permanentemente con este título">¶</a></h1>
+<h1><a class="toc-backref" href="#id1">Laboratorio 1: Crear  y  simular un inversor</a><a class="headerlink" href="#laboratorio-1-crear-y-simular-un-inversor" title="Enlazar permanentemente con este título">¶</a></h1>
 <p>En este laboratorio se crearán inversores de distintos tamaños y se realizaran simulaciones para comparar su comportamiento</p>
+<div class="contents topic" id="contenidos-del-laboratorio">
+<p class="topic-title">Contenidos del laboratorio</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#laboratorio-1-crear-y-simular-un-inversor" id="id1">Laboratorio 1: Crear  y  simular un inversor</a></p>
+<ul>
+<li><p><a class="reference internal" href="#objetivos" id="id2">Objetivos</a></p></li>
+<li><p><a class="reference internal" href="#procedimiento" id="id3">Procedimiento</a></p>
+<ul>
+<li><p><a class="reference internal" href="#layout-y-esquematico-de-los-inversores" id="id4">Layout y esquemático de los inversores</a></p></li>
+<li><p><a class="reference internal" href="#simulacion-1-curva-de-transicion-del-inversor" id="id5">Simulación 1: curva de transición del inversor</a></p></li>
+<li><p><a class="reference internal" href="#simulacion-2-potencia" id="id6">Simulación 2: potencia</a></p></li>
+<li><p><a class="reference internal" href="#simulacion-3-tiempo-de-ascenso-y-caida" id="id7">Simulación 3: tiempo de ascenso y caída</a></p></li>
+<li><p><a class="reference internal" href="#simulacion-4-ruido" id="id8">Simulación 4: ruido</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
 <div class="section" id="objetivos">
-<h2>Objetivos<a class="headerlink" href="#objetivos" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2><a class="toc-backref" href="#id2">Objetivos</a><a class="headerlink" href="#objetivos" title="Enlazar permanentemente con este título">¶</a></h2>
 <ul class="simple">
 <li><p>Analizar la curva de <span class="math notranslate nohighlight">\(V_{in}\)</span> vs <span class="math notranslate nohighlight">\(V_{out}\)</span> de un inversor para distintas proporciones <span class="math notranslate nohighlight">\({𝛽_p}/{𝛽_n}\)</span></p></li>
 <li><p>Simular el tiempo de ascenso y caída del inversor</p></li>
@@ -190,37 +211,37 @@
 </ul>
 </div>
 <div class="section" id="procedimiento">
-<h2>Procedimiento<a class="headerlink" href="#procedimiento" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2><a class="toc-backref" href="#id3">Procedimiento</a><a class="headerlink" href="#procedimiento" title="Enlazar permanentemente con este título">¶</a></h2>
 <div class="section" id="layout-y-esquematico-de-los-inversores">
-<h3>Layout y esquemático de los inversores<a class="headerlink" href="#layout-y-esquematico-de-los-inversores" title="Enlazar permanentemente con este título">¶</a></h3>
+<h3><a class="toc-backref" href="#id4">Layout y esquemático de los inversores</a><a class="headerlink" href="#layout-y-esquematico-de-los-inversores" title="Enlazar permanentemente con este título">¶</a></h3>
 <ol class="arabic">
 <li><p>Cree  el  esquemático  y  el  ícono  para  un  inversor    con  las  siguientes  dimensiones <span class="math notranslate nohighlight">\(W_p = 20𝜆\)</span> y <span class="math notranslate nohighlight">\(W_n = 10𝜆\)</span>.   Asegúrese   de   exportar   las   entradas   y   salidas.   En TutorialVLSILab se  explica  con  detalle  los  pasos  a  seguir  para  crear  una  celda refiérase a este para la creación del primer inversor, un nombre representativo para este inversor puede ser Inv_20_10.</p>
 <div class="figure align-center" id="lab1-1">
 <a class="reference internal image-reference" href="../_images/Lab1_1.png"><img alt="../_images/Lab1_1.png" src="../_images/Lab1_1.png" style="width: 194.5px; height: 347.0px;" /></a>
-<p class="caption"><span class="caption-number">Figura 6 </span><span class="caption-text">Esquemático del inversor</span><a class="headerlink" href="#lab1-1" title="Enlace permanente a esta imagen">¶</a></p>
+<p class="caption"><span class="caption-number">Figura 44 </span><span class="caption-text">Esquemático del inversor</span><a class="headerlink" href="#lab1-1" title="Enlace permanente a esta imagen">¶</a></p>
 </div>
 </li>
 <li><p>Dibuje el layout para esta celda. Para este laboratorio <span class="math notranslate nohighlight">\(V_{cc}\)</span>  y <span class="math notranslate nohighlight">\(V_{ss}\)</span> deberán correr de forma  horizontal  en  la  parte  superior  e  inferior  de  la  celda  en    metal  1,    el  espacio entre <span class="math notranslate nohighlight">\(V_{cc}\)</span>  y <span class="math notranslate nohighlight">\(V_{ss}\)</span> será de 80 λ de centro a centro. Los transistores nmos ocuparan la parte  inferior  de  la  celda  y  los  pmos  la  parte  superior;  las  entradas  y  salidas  se conectaran por medio de contactos de metal 2, aparte de esto las ningún metal2 o 3 deberá  ser  utilizado  dentro  de  las  celdas.  Asegúrese  de  establecer  el  modelo  de Spice para los transistores.</p>
 <div class="figure align-center" id="lab1-2">
 <a class="reference internal image-reference" href="../_images/Lab1_2.png"><img alt="../_images/Lab1_2.png" src="../_images/Lab1_2.png" style="width: 112.5px; height: 362.0px;" /></a>
-<p class="caption"><span class="caption-number">Figura 7 </span><span class="caption-text">Layout para del inversor</span><a class="headerlink" href="#lab1-2" title="Enlace permanente a esta imagen">¶</a></p>
+<p class="caption"><span class="caption-number">Figura 45 </span><span class="caption-text">Layout para del inversor</span><a class="headerlink" href="#lab1-2" title="Enlace permanente a esta imagen">¶</a></p>
 </div>
 </li>
 <li><p>Use la herramienta DRC para verificar que el layout cumple con las reglas de diseño</p></li>
 <li><p>Verifique que el layout y el esquemático sean equivalentes por medio de NCC. Puede ver la celda en 3D para tener un mejor entendimiento de la interacción entre las distintas capas:</p>
 <div class="figure align-center" id="lab1-3">
 <a class="reference internal image-reference" href="../_images/Lab1_3.png"><img alt="../_images/Lab1_3.png" src="../_images/Lab1_3.png" style="width: 293.0px; height: 199.0px;" /></a>
-<p class="caption"><span class="caption-number">Figura 8 </span><span class="caption-text">Vista en 3D del inversor</span><a class="headerlink" href="#lab1-3" title="Enlace permanente a esta imagen">¶</a></p>
+<p class="caption"><span class="caption-number">Figura 46 </span><span class="caption-text">Vista en 3D del inversor</span><a class="headerlink" href="#lab1-3" title="Enlace permanente a esta imagen">¶</a></p>
 </div>
 </li>
 <li><p>Ahora cree otros dos inversores (las tres vistas) para dos grupos de dimensiones: <span class="math notranslate nohighlight">\(W_p = 10𝜆\)</span>, <span class="math notranslate nohighlight">\(W_n = 10𝜆\)</span> y <span class="math notranslate nohighlight">\(W_p = 15𝜆\)</span>, <span class="math notranslate nohighlight">\(W_n = 5𝜆\)</span>. El tamaño de la celda se debe mantener. Para hacer esto más rápido de click derecho  sobre la celda Inv_20_10 seleccione “Duplicate cells in group” cambie el nombre para el grupo y modifique esta nueva celda.</p>
 <div class="figure align-center" id="lab1-4">
 <a class="reference internal image-reference" href="../_images/Lab1_4.png"><img alt="../_images/Lab1_4.png" src="../_images/Lab1_4.png" style="width: 97.0px; height: 90.4px;" /></a>
-<p class="caption"><span class="caption-number">Figura 9 </span><span class="caption-text">Menu de duplicación de celdas</span><a class="headerlink" href="#lab1-4" title="Enlace permanente a esta imagen">¶</a></p>
+<p class="caption"><span class="caption-number">Figura 47 </span><span class="caption-text">Menu de duplicación de celdas</span><a class="headerlink" href="#lab1-4" title="Enlace permanente a esta imagen">¶</a></p>
 </div>
 <div class="figure align-center" id="lab1-5">
 <a class="reference internal image-reference" href="../_images/Lab1_5.png"><img alt="../_images/Lab1_5.png" src="../_images/Lab1_5.png" style="width: 324.0px; height: 381.0px;" /></a>
-<p class="caption"><span class="caption-number">Figura 10 </span><span class="caption-text">Layout para las distintas versiones del inversor</span><a class="headerlink" href="#lab1-5" title="Enlace permanente a esta imagen">¶</a></p>
+<p class="caption"><span class="caption-number">Figura 48 </span><span class="caption-text">Layout para las distintas versiones del inversor</span><a class="headerlink" href="#lab1-5" title="Enlace permanente a esta imagen">¶</a></p>
 </div>
 </li>
 <li><p>Use las herramientas DRC y NCC para las dos nuevas celdas que creó</p></li>
@@ -228,14 +249,14 @@
 </ol>
 </div>
 <div class="section" id="simulacion-1-curva-de-transicion-del-inversor">
-<h3>Simulación 1: curva de transición del inversor<a class="headerlink" href="#simulacion-1-curva-de-transicion-del-inversor" title="Enlazar permanentemente con este título">¶</a></h3>
+<h3><a class="toc-backref" href="#id5">Simulación 1: curva de transición del inversor</a><a class="headerlink" href="#simulacion-1-curva-de-transicion-del-inversor" title="Enlazar permanentemente con este título">¶</a></h3>
 <ol class="arabic">
 <li><p>Haga una copia de los layout para realizar una simulación</p></li>
 <li><p>Prepare la simulación, puede apoyarse en el tutorial</p></li>
 <li><p>Realice un análisis DC  donde se determine el valor de Vout para un valor dado de Vin, realice un grafico de <span class="math notranslate nohighlight">\(V_{out}\)</span> vs <span class="math notranslate nohighlight">\(V_{in}\)</span> para cada uno de los transistores</p>
 <div class="figure align-center" id="lab1-6">
 <a class="reference internal image-reference" href="../_images/Lab1_6.png"><img alt="../_images/Lab1_6.png" src="../_images/Lab1_6.png" style="width: 674.5px; height: 222.5px;" /></a>
-<p class="caption"><span class="caption-number">Figura 11 </span><span class="caption-text">VTC del inversor</span><a class="headerlink" href="#lab1-6" title="Enlace permanente a esta imagen">¶</a></p>
+<p class="caption"><span class="caption-number">Figura 49 </span><span class="caption-text">VTC del inversor</span><a class="headerlink" href="#lab1-6" title="Enlace permanente a esta imagen">¶</a></p>
 </div>
 </li>
 <li><p>Determine los márgenes de ruido para cada uno de estos inversores</p></li>
@@ -250,7 +271,7 @@
 </ol>
 </div>
 <div class="section" id="simulacion-2-potencia">
-<h3>Simulación 2: potencia<a class="headerlink" href="#simulacion-2-potencia" title="Enlazar permanentemente con este título">¶</a></h3>
+<h3><a class="toc-backref" href="#id6">Simulación 2: potencia</a><a class="headerlink" href="#simulacion-2-potencia" title="Enlazar permanentemente con este título">¶</a></h3>
 <ol class="arabic simple">
 <li><p>Para los siguientes cálculos considere el inversor simétrico de dimensiones <span class="math notranslate nohighlight">\(W_p = 20𝜆\)</span> y <span class="math notranslate nohighlight">\(W_n = 10𝜆\)</span></p></li>
 <li><p>De   la   simulación   anterior,   visualice   la   corriente   del   inversor   durante   la transición,  observe  que  la  corriente  alcanza  un  pico  en   <span class="math notranslate nohighlight">\(V_m\)</span>,  que  implicaciones tiene esto en consumo de potencia?</p></li>
@@ -258,32 +279,32 @@
 </ol>
 </div>
 <div class="section" id="simulacion-3-tiempo-de-ascenso-y-caida">
-<h3>Simulación 3: tiempo de ascenso y caída<a class="headerlink" href="#simulacion-3-tiempo-de-ascenso-y-caida" title="Enlazar permanentemente con este título">¶</a></h3>
+<h3><a class="toc-backref" href="#id7">Simulación 3: tiempo de ascenso y caída</a><a class="headerlink" href="#simulacion-3-tiempo-de-ascenso-y-caida" title="Enlazar permanentemente con este título">¶</a></h3>
 <ol class="arabic">
 <li><p>Las  compuertas  lógicas    introducen  un  tiempo  de  retardo  cuanto  sus  entradas cambian,  la  señal  de  entrada  reacciona  a  la  salida,  pero  el  voltaje  de  salida  no puede  cambiar  de  forma  instantánea.  La  transición    de  la  salida  de 1  a  0  es  el retardo  de  caída  y  de  0  a  1  el  de  ascenso.  Estos  tiempos  se  pueden  calcular analizando las transiciones de los circuitos</p></li>
 <li><p>Realice una simulación con una carga de 4FO, en el los archivos de Spice puede ver  cuánto  es  la  capacitancia  de  entrada  para  cada  uno  para  cada  uno  de  los inversores  que  dibujó.  El  tiempo  de  ascenso  y  de    caída  se  definirán  como  el tiempo de la compuerta de pasar del 10% al 90% de su valor final</p>
 <div class="figure align-center" id="lab1-7">
 <a class="reference internal image-reference" href="../_images/Lab1_7.png"><img alt="../_images/Lab1_7.png" src="../_images/Lab1_7.png" style="width: 624.0px; height: 204.5px;" /></a>
-<p class="caption"><span class="caption-number">Figura 12 </span><span class="caption-text">Tiempos de ascenso y caída</span><a class="headerlink" href="#lab1-7" title="Enlace permanente a esta imagen">¶</a></p>
+<p class="caption"><span class="caption-number">Figura 50 </span><span class="caption-text">Tiempos de ascenso y caída</span><a class="headerlink" href="#lab1-7" title="Enlace permanente a esta imagen">¶</a></p>
 </div>
 </li>
 <li><p>Compare los tiempos ascenso y caída para los distintos inversores que dibujó</p></li>
 <li><p>Ahora  manteniendo  la  misma  carga,  varíe  la  forma  de  la  señal  de  entrada, cambiando  el  slope,  algo  similar  a  lo  que  se  muestra  a  continuación,  escoja  5 valores para este slope  y simule para cada inversor, compare. Como afecta esta variación en la salida la velocidad de respuesta del inversor</p>
 <div class="figure align-center" id="lab1-8">
 <a class="reference internal image-reference" href="../_images/Lab1_8.png"><img alt="../_images/Lab1_8.png" src="../_images/Lab1_8.png" style="width: 700.0px; height: 181.0px;" /></a>
-<p class="caption"><span class="caption-number">Figura 13 </span><span class="caption-text">Slope de entrada</span><a class="headerlink" href="#lab1-8" title="Enlace permanente a esta imagen">¶</a></p>
+<p class="caption"><span class="caption-number">Figura 51 </span><span class="caption-text">Slope de entrada</span><a class="headerlink" href="#lab1-8" title="Enlace permanente a esta imagen">¶</a></p>
 </div>
 </li>
 </ol>
 </div>
 <div class="section" id="simulacion-4-ruido">
-<h3>Simulación 4: ruido<a class="headerlink" href="#simulacion-4-ruido" title="Enlazar permanentemente con este título">¶</a></h3>
+<h3><a class="toc-backref" href="#id8">Simulación 4: ruido</a><a class="headerlink" href="#simulacion-4-ruido" title="Enlazar permanentemente con este título">¶</a></h3>
 <ol class="arabic">
 <li><p>Para analizar la inmunidad al ruido del inversor genere señales a la entrada que le  permitan  determinar    como  se  ve  afectado  el  valor  de  la  salida  por  el  ruido. Determine  qué  valor  de  voltaje  en  la  entrada  logra  distorsionar  la  salida. Itere cuantas veces sea necesario</p></li>
 <li><p>¿Cómo  se  ven  afectados  estos  valores  por  el  dimensionamiento  del  transistor? Qué nivel lógico se está beneficiado, en términos de inmunidad al ruido, con el dimensionamiento de los transistores.Figura 6.13. Laboratorio 1: Simulación de Ruido</p>
 <div class="figure align-center" id="lab1-9">
 <a class="reference internal image-reference" href="../_images/Lab1_9.png"><img alt="../_images/Lab1_9.png" src="../_images/Lab1_9.png" style="width: 671.5px; height: 334.5px;" /></a>
-<p class="caption"><span class="caption-number">Figura 14 </span><span class="caption-text">Simulación de ruido</span><a class="headerlink" href="#lab1-9" title="Enlace permanente a esta imagen">¶</a></p>
+<p class="caption"><span class="caption-number">Figura 52 </span><span class="caption-text">Simulación de ruido</span><a class="headerlink" href="#lab1-9" title="Enlace permanente a esta imagen">¶</a></p>
 </div>
 </li>
 </ol>
