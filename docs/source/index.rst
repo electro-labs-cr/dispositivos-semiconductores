@@ -8,6 +8,18 @@ Dispositivos Semiconductores - Laboratorios
 
 Los siguientes laboratorios buscan complementar los contenidos teóricos del curso de Dispositivos Semiconductores (IE-0311) del la `Escuela de Ingeniería Eléctrica de la UCR <https://eie.ucr.ac.cr/>`_
 
+-  :ref:`tutorial/instalacion:Instalación de herramientas`
+   
+   .. include:: tutorial/instalacion.rst
+      :start-line: 2
+      :end-line: 4
+
+
+-  :ref:`tutorial/tutorial:Tutorial de laboratorio`
+   
+   .. include:: tutorial/tutorial.rst
+      :start-line: 2
+      :end-line: 4
 
 -  :ref:`labs/lab0:Laboratorio 0: Curvas del MOSFET`
    
@@ -49,14 +61,16 @@ Los siguientes laboratorios buscan complementar los contenidos teóricos del cur
    :caption: Contenido:
    :maxdepth: 1
    :glob:
-      
+   
+   tutorial/instalacion
+   tutorial/tutorial
    labs/lab*
 
 
 .. .. [1] Sanabria Sancho, Loriana; “Laboratorios de Microelectrónica”; IE-0502 Proyecto Eléctrico, Ingeniería Eléctrica, Universidad de Costa Rica, 2012
 
-Licencia
-========
+Licencia:
+=========
 .. raw:: html
-   
+
    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.

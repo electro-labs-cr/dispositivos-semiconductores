@@ -3,6 +3,9 @@ Laboratorio 5: Celda compleja y algoritmos de placement (opcional)
 
 Se crea un sumador y se explora la complejidad de los algoritmos de placement
 
+.. contents:: Contenidos del laboratorio
+    :depth: 4
+
 Objetivos
 *********
 *  Construir un sumador con las compuertas construidas en los laboratorios anteriores

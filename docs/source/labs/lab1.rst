@@ -3,6 +3,9 @@ Laboratorio 1: Crear  y  simular un inversor
 
 En este laboratorio se crearán inversores de distintos tamaños y se realizaran simulaciones para comparar su comportamiento
 
+.. contents:: Contenidos del laboratorio
+    :depth: 4
+
 Objetivos
 *********
 *  Analizar la curva de :math:`V_{in}` vs :math:`V_{out}` de un inversor para distintas proporciones :math:`{𝛽_p}/{𝛽_n}`

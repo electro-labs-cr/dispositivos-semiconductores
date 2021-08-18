@@ -1,23 +1,18 @@
 Laboratorio 0: Curvas del MOSFET
 ################################
 
-Este laboratorio es una introducción a las herramientas que se utilizarán en los distintitos laboratorios, se inicia con una guía rápida de instalación y luego se simularán transistores PMOS y NMOS.
+Este laboratorio es una introducción donde se simularán transistores PMOS y NMOS.
+
+.. contents:: Contenidos del laboratorio
+    :depth: 4
 
 Objetivos
 *********
-*  Familiarizarse con las herramientas
 *  Analizar la curva de corriente :math:`I_{ds}` contra :math:`V_{ds}`, para distintos valores de :math:`V_{gs}`
 *  Identificar las regiones de operación para los transistores NMOS y PMOS
 
 Procedimiento
 *************
-
-Instalación de herramientas
-===========================
-#.  Electric es una herramienta “Open Source” para el diseño de circuitos integrados, posee  muchas  funciones  de  diseño  y  verificación  como  DRC,  ERC,LVS,  enrutamiento  y análisis del esfuerzo lógico. Para instalar Electric de forma rápida vaya al sitio de `Electric <https://www.staticfreesoft.com/productsFree.html>`_ y  guarde  el  binario  electric.jar en  su  computadora, el programa debe puede ser ejectutado con java  en Windows, Linux o Mac
-
-#.  LTSpice es la herramienta de Spice que se utilizará para las simulaciones. Para instalar LTSpice  vaya  al sitio de  `LTspice  <https://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html>`_ y  descarge la herramienta. El programa esta disponible para Windows y Mac, en Linux puede ser instalada usando Wine
-
 
 Simulación: curvas del transistor
 =================================
