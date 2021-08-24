@@ -355,7 +355,29 @@ Ahora se debe  incorporar el código de Spice que se desea simular, en las pesta
 
     Ventana donde se incorpora el códido de Spice
 
-De click en Ok y ahora pondrá ver este código en la ventana donde esta su celda para  simulación,  modifique  el  tamaño  del  texto  para  que  sea  visible  y  de  click  en  la opción  de  multilinea. Como  ejemplo  para  esta  simulación  cambiaremos  el  voltaje  de entrada  de  0  a  5  volts,  y  no  pondremos  ninguna  carga  la  salida  de  la  compuerta. Debemos  incluir  el  archivo spice.txt que  el  archivo  que  contiene  los  parámetros  para simulación  de  Spice,  estos  parámetros  son  para  un  proceso  subsidiado  por  MOSIS, asegúrese  de  incluireste  archivo  de  forma  correcta  y  de  que  los  nombres  de  las conexiones que realizó correspondan a los nombres del código de Spice.
+De click en Ok y ahora pondrá ver este código en la ventana donde esta su celda para  simulación,  modifique  el  tamaño  del  texto  para  que  sea  visible  y  de  click  en  la opción  de  multilinea. Como  ejemplo  para  esta  simulación  cambiaremos  el  voltaje  de entrada  de  0  a  5  volts,  y  no  pondremos  ninguna  carga  la  salida  de  la  compuerta. Debemos  crear  el  archivo spice.txt que  rd el  archivo  que  contiene  los  parámetros  para simulación  de  Spice,  estos  parámetros  son  para  un  proceso  subsidiado  por  MOSIS, asegúrese  de  incluir este  archivo  de  forma  correcta  y  de  que  los  nombres  de  las conexiones que realizó correspondan a los nombres del código de Spice. Ejemplo de archivo a incluir:
+
+.. code-block:: 
+
+    *** 0.5um CMOS technology 
+    ***
+    *SPICE LEVEL3 PARAMETERS
+    .MODEL NMOS NMOS LEVEL=3 PHI=0.7 TOX=9.5E-09 XJ=0.2U TPG=1
+    + VTO=0.7 DELTA=8.8E-01 LD=5E-08 KP=1.56E-04
+    + UO=420 THETA=2.3E-01 RSH=2.0E+00 GAMMA=0.62
+    + NSUB=1.40E+17 NFS=7.20E+11 VMAX=1.8E+05 ETA=2.125E-02
+    + KAPPA=1E-01 CGDO=3.0E-10 CGSO=3.0E-10
+    + CGBO=4.5E-10 CJ=5.50E-04 MJ=0.6 CJSW=3E-10
+    + MJSW=0.35 PB=1.1
+
+    *SPICE LEVEL3 PARAMETERS
+    .MODEL PMOS PMOS LEVEL=3 PHI=0.7 TOX=9.5E-09 XJ=0.2U TPG=-1
+    + VTO=-0.95 DELTA=2.5E-01 LD=7E-08 KP=4.8E-05
+    + UO=130 THETA=2.0E-01 RSH=2.5E+00 GAMMA=0.52
+    + NSUB=1.0E+17 NFS=6.50E+11 VMAX=3.0E+05 ETA=2.5E-02
+    + KAPPA=8.0E+00 CGDO=3.5E-10 CGSO=3.5E-10
+    + CGBO=4.5E-10 CJ=9.50E-04 MJ=0.5 CJSW=2E-10
+    + MJSW=0.25 PB=1
 
 .. figure:: ../img/tuto_31.png
     :name: tuto31
@@ -385,7 +407,7 @@ Abrá LTSpice y vaya File˖Open y busque el archivo que desea simular.
 
     Archivo .spi en LTspice
 
-Para  correr  la  simulación  de  click  en  el  botón |run_ico|,  ahora  tendrá  una  nueva ventana  en esta es donde se  grafican los resultados de la simulación, vaya a |wave_ico| para seleccionar las señales que desea graficar.
+Para  correr  la  simulación  de  click  en  el  botón |run_ico|. Si el botón de correr no funciona intente cambiar la extensión del archivo .spi o .cir. Ahora  tendrá  una  nueva ventana  en esta es donde se  grafican los resultados de la simulación, vaya a |wave_ico| para seleccionar las señales que desea graficar.
 
 .. |run_ico| image:: ../img/tuto_ico1.png
     :scale: 25% 
