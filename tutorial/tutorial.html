@@ -411,7 +411,7 @@
 <p>Electric puede generar archivos de entrada para diferentes simuladores externos, en  nuestro  caso  usaremos  LTspice.  Pero  antes  de  realizar  una  simulación  se  deben cambiar algunas de las preferencias que Electric tiene por defecto.</p>
 <p>En File˖Preferences, en la sección “Tools” seleccionamos Spice, y cambiamos las preferencias a las que se muestran a continuación.</p>
 <div class="figure align-center" id="tuto26">
-<a class="reference internal image-reference" href="../_images/tuto_26.png"><img alt="../_images/tuto_26.png" src="../_images/tuto_26.png" style="width: 545.0px; height: 393.0px;" /></a>
+<a class="reference internal image-reference" href="../_images/tuto_26.png"><img alt="../_images/tuto_26.png" src="../_images/tuto_26.png" style="width: 456.0px; height: 214.2px;" /></a>
 <p class="caption"><span class="caption-number">Figura 26 </span><span class="caption-text">File/Preferences/Tools/Spice</span><a class="headerlink" href="#tuto26" title="Enlace permanente a esta imagen">¶</a></p>
 </div>
 <p>Verifique  los  transistores  de  la  celda  que  desea  simular  tengan  definido  el modelo de Spice, ya sea NMOS o PMOS para hacer esto seleccione el transistor y vaya a Tools˖Spice˖SetSpiceModel, al hacer esto aparecerá un texto sobre el transistor que deberá cambiar a PMOS o NMOS.</p>
@@ -440,6 +440,15 @@
 <div class="figure align-center" id="tuto31">
 <a class="reference internal image-reference" href="../_images/tuto_31.png"><img alt="../_images/tuto_31.png" src="../_images/tuto_31.png" style="width: 406.8px; height: 297.6px;" /></a>
 <p class="caption"><span class="caption-number">Figura 31 </span><span class="caption-text">Celda lista para la simulación</span><a class="headerlink" href="#tuto31" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+<p>Códigode ejemplo:
+.. code-block:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">VDD</span> <span class="n">VDD</span> <span class="mi">0</span> <span class="n">DC</span> <span class="mi">5</span>
+<span class="n">VGND</span> <span class="n">GDN</span> <span class="mi">0</span> <span class="n">DC</span> <span class="mi">0</span>
+<span class="n">Vin</span> <span class="n">Vin</span> <span class="mi">0</span> <span class="n">DC</span> <span class="mi">0</span>
+<span class="o">.</span><span class="n">include</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">oscar</span><span class="o">/</span><span class="n">Documents</span><span class="o">/</span><span class="n">UCR</span><span class="o">/</span><span class="n">Cursos</span><span class="o">/</span><span class="n">DSemiconductores</span><span class="o">/</span><span class="n">Laboratorio</span><span class="o">/</span><span class="n">spice</span><span class="o">.</span><span class="n">txt</span>
+<span class="o">.</span><span class="n">DC</span> <span class="n">Vin</span> <span class="mi">0</span> <span class="mi">5</span> <span class="mi">1</span><span class="n">m</span>
+</pre></div>
 </div>
 <p>Para  este  punto  tal  vez  no  comprenda  este  código  de  Spice,  por  lo  que  en  la siguiente sección Código de Spice  se detalla las opciones que se pueden  utilizar para otro tipo de simulaciones.</p>
 <p>Ahora   generaremos  el   código  para  Spice  ,vaya  a  Tools/Simulation(Spice)/ WriteSpiceDeck. Con estose creara un archivo de extensión .spi que es la entrada para la simulación en LTspice.</p>
