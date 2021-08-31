@@ -364,7 +364,8 @@ De click en Ok y ahora pondrá ver este código en la ventana donde esta su celd
 
     Celda lista para la simulación
 
-Códigode ejemplo:
+Código de ejemplo:
+
 .. code-block::
 
     VDD VDD 0 DC 5
