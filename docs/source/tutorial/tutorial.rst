@@ -310,7 +310,7 @@ En File˖Preferences, en la sección “Tools” seleccionamos Spice, y cambiamo
 
 .. figure:: ../img/tuto_26.png
     :name: tuto26
-    :scale: 50 %
+    :scale: 60 %
     :align: center
 
     File/Preferences/Tools/Spice
@@ -363,6 +363,15 @@ De click en Ok y ahora pondrá ver este código en la ventana donde esta su celd
     :align: center
 
     Celda lista para la simulación
+
+Códigode ejemplo:
+.. code-block::
+
+    VDD VDD 0 DC 5
+    VGND GDN 0 DC 0
+    Vin Vin 0 DC 0
+    .include /Users/oscar/Documents/UCR/Cursos/DSemiconductores/Laboratorio/spice.txt
+    .DC Vin 0 5 1m
 
 Para  este  punto  tal  vez  no  comprenda  este  código  de  Spice,  por  lo  que  en  la siguiente sección Código de Spice  se detalla las opciones que se pueden  utilizar para otro tipo de simulaciones.
 
