@@ -369,7 +369,7 @@ Código de ejemplo:
 .. code-block::
 
     VDD VDD 0 DC 5
-    VGND GDN 0 DC 0
+    VGND GND 0 DC 0
     Vin Vin 0 DC 0
     .include /Users/oscar/Documents/UCR/Cursos/DSemiconductores/Laboratorio/spice.txt
     .DC Vin 0 5 1m
