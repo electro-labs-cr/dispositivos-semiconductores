@@ -45,7 +45,7 @@ Los siguientes laboratorios buscan complementar los contenidos teóricos del cur
       :start-line: 2
       :end-line: 4
 
--  :ref:`labs/lab5:Laboratorio 5: Celda compleja y algoritmos de placement (opcional)`
+-  :ref:`labs/lab5:Laboratorio 4: Celda compleja y algoritmos de placement (opcional)`
    
    .. include:: labs/lab5.rst
       :start-line: 2
