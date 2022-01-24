@@ -20,7 +20,7 @@
 project = 'Dispositivos Semiconductores'
 copyright = '2021, Loriana Sanabria - Oscar Villalta'
 author = 'Loriana Sanabria - Oscar Villalta'
-
+master_doc = 'index'
 # The full version, including alpha/beta/rc tags
 release = '1.0'
 
