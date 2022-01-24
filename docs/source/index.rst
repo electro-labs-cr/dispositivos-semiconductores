@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Dispositivos Semiconductores - Laboratorios
+Dispositivos Semiconductores - Laboratorios -- PRUEBA
 ============================================================
 
 Los siguientes laboratorios buscan complementar los contenidos teóricos del curso de Dispositivos Semiconductores (IE-0311) de la `Escuela de Ingeniería Eléctrica de la UCR <https://eie.ucr.ac.cr/>`_
