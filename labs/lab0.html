@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html class="writer-html4" lang="es" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laboratorio 0: Curvas del MOSFET &mdash; documentación de Dispositivos Semiconductores - 1.0</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Laboratorio 1: Crear y simular un inversor" href="lab1.html" />
+    <link rel="prev" title="Tutorial de laboratorio" href="../tutorial/tutorial.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Dispositivos Semiconductores<img src="../_static/LogoUCR.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Contenido:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/instalacion.html">Instalación de herramientas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/tutorial.html">Tutorial de laboratorio</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Laboratorio 0: Curvas del MOSFET</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#objetivos">Objetivos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#procedimiento">Procedimiento</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#simulacion-curvas-del-transistor">Simulación: curvas del transistor</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="lab1.html">Laboratorio 1: Crear  y  simular un inversor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lab2.html">Laboratorio 2: Crear compuertas básicas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lab3.html">Laboratorio 3: Crear compuertas de paso</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lab4.html">Laboratorio 4: Crear compuertas dinámicas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lab5.html">Laboratorio 5: Celda compleja y algoritmos de placement (opcional)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Dispositivos Semiconductores</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Laboratorio 0: Curvas del MOSFET</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/labs/lab0.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="laboratorio-0-curvas-del-mosfet">
+<h1><a class="toc-backref" href="#id3">Laboratorio 0: Curvas del MOSFET</a><a class="headerlink" href="#laboratorio-0-curvas-del-mosfet" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Este laboratorio es una introducción donde se simularán transistores PMOS y NMOS.</p>
+<div class="contents topic" id="contenidos-del-laboratorio">
+<p class="topic-title">Contenidos del laboratorio</p>
+<ul class="simple">
+<li><a class="reference internal" href="#laboratorio-0-curvas-del-mosfet" id="id3">Laboratorio 0: Curvas del MOSFET</a><ul>
+<li><a class="reference internal" href="#objetivos" id="id4">Objetivos</a></li>
+<li><a class="reference internal" href="#procedimiento" id="id5">Procedimiento</a><ul>
+<li><a class="reference internal" href="#simulacion-curvas-del-transistor" id="id6">Simulación: curvas del transistor</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="objetivos">
+<h2><a class="toc-backref" href="#id4">Objetivos</a><a class="headerlink" href="#objetivos" title="Enlazar permanentemente con este título">¶</a></h2>
+<ul class="simple">
+<li>Analizar la curva de corriente <span class="math notranslate nohighlight">\(I_{ds}\)</span> contra <span class="math notranslate nohighlight">\(V_{ds}\)</span>, para distintos valores de <span class="math notranslate nohighlight">\(V_{gs}\)</span></li>
+<li>Identificar las regiones de operación para los transistores NMOS y PMOS</li>
+</ul>
+</div>
+<div class="section" id="procedimiento">
+<h2><a class="toc-backref" href="#id5">Procedimiento</a><a class="headerlink" href="#procedimiento" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="simulacion-curvas-del-transistor">
+<h3><a class="toc-backref" href="#id6">Simulación: curvas del transistor</a><a class="headerlink" href="#simulacion-curvas-del-transistor" title="Enlazar permanentemente con este título">¶</a></h3>
+<ol class="arabic">
+<li><p class="first">Cree una celda en vista de layout como se muestra en la <a class="reference internal" href="#lab0-1"><span class="std std-numref">Figura 39</span></a> , deles un nombre significativo por ejemplo NMOS_IV_lay,  como  referencia  puede  consultar  el  tutorial,  use <span class="math notranslate nohighlight">\(W_n = 10𝞴\)</span></p>
+<div class="figure align-center" id="lab0-1">
+<a class="reference internal image-reference" href="../_images/Lab0_1.png"><img alt="../_images/Lab0_1.png" src="../_images/Lab0_1.png" style="width: 213.5px; height: 309.5px;" /></a>
+<p class="caption"><span class="caption-number">Figura 39 </span><span class="caption-text">Vista de layout de un transistor NMOS</span></p>
+</div>
+</li>
+<li><p class="first">Establezca el modelo de Spice para el transistor</p>
+</li>
+<li><p class="first">Presione la tecla F5 para verificar que no hayan errores en el layout</p>
+</li>
+<li><p class="first">Exporte las terminales:</p>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="../_images/Lab0_2.png"><img alt="../_images/Lab0_2.png" src="../_images/Lab0_2.png" style="width: 335.0px; height: 299.0px;" /></a>
+<p class="caption"><span class="caption-number">Figura 40 </span><span class="caption-text">Transistor NMOS con terminales</span></p>
+</div>
+</li>
+<li><p class="first">Repita para el transistor PMOS:</p>
+<div class="figure align-center" id="id2">
+<a class="reference internal image-reference" href="../_images/Lab0_3.png"><img alt="../_images/Lab0_3.png" src="../_images/Lab0_3.png" style="width: 376.0px; height: 342.5px;" /></a>
+<p class="caption"><span class="caption-number">Figura 41 </span><span class="caption-text">Transistor PMOS con terminales</span></p>
+</div>
+</li>
+<li><p class="first">Cree una simulación para los dos transistores donde para 5 valores de <span class="math notranslate nohighlight">\(V_{gs}\)</span> se muestre la relación de corriente <span class="math notranslate nohighlight">\(I_{ds}\)</span> vs <span class="math notranslate nohighlight">\(V_{gs}\)</span>, similar a las mostradas en la <a class="reference internal" href="#lab0-4"><span class="std std-numref">Figura 42</span></a> y la <a class="reference internal" href="#lab0-5"><span class="std std-numref">Figura 43</span></a></p>
+<div class="figure align-center" id="lab0-4">
+<a class="reference internal image-reference" href="../_images/Lab0_4.png"><img alt="../_images/Lab0_4.png" src="../_images/Lab0_4.png" style="width: 614.5px; height: 305.5px;" /></a>
+<p class="caption"><span class="caption-number">Figura 42 </span><span class="caption-text">Curvas <span class="math notranslate nohighlight">\(I_{ds}\)</span> vs <span class="math notranslate nohighlight">\(V_{gs}\)</span> del transistor PMOS</span></p>
+</div>
+<div class="figure align-center" id="lab0-5">
+<a class="reference internal image-reference" href="../_images/Lab0_5.png"><img alt="../_images/Lab0_5.png" src="../_images/Lab0_5.png" style="width: 614.5px; height: 303.5px;" /></a>
+<p class="caption"><span class="caption-number">Figura 43 </span><span class="caption-text">Curvas <span class="math notranslate nohighlight">\(I_{ds}\)</span> vs <span class="math notranslate nohighlight">\(V_{gs}\)</span> del transistor NMOS</span></p>
+</div>
+</li>
+<li><p class="first">Identifique las regiones de operación para los transistores</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../tutorial/tutorial.html" class="btn btn-neutral float-left" title="Tutorial de laboratorio" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="lab1.html" class="btn btn-neutral float-right" title="Laboratorio 1: Crear y simular un inversor" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2021, Loriana Sanabria - Oscar Villalta.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
